@@ -1,0 +1,109 @@
+//
+// Navs
+// --------------------------------------------------
+
+
+// Base class
+// --------------------------------------------------
+
+.nav {
+  > li {
+
+    // Disabled state sets text to gray and nukes hover/tab effects
+    &.disabled > a {
+
+      &:hover,
+      &:focus {
+        cursor: not-allowed;
+      }
+    }
+  }
+}
+
+// Custom Stacked Navs
+// -------------------------
+
+.nav.nav-stacked {
+  a[data-toggle] {
+    &::after {
+      content: '\3d';
+      font-family: 'UX-Framework';
+      float: right;
+    }
+    &.collapsed::after {
+      content: '\4b';
+    }
+  }
+  ul.nav.nav-stacked {
+    margin-left: 1em;
+  }
+  &.nav-stacked-inverse {
+    background-color: #424242;
+    color: #b8b8b8;
+    > li + li {
+      margin-top: 0px;
+    }
+    a {
+      color: #b8b8b8;
+      padding: 8px 15px;
+      &:hover, &:focus {
+        background-color: #5d5d5d;
+      }
+    }
+    li.active a {
+      background-color: @proquest-brand;
+      color: #fff;
+      &:hover, &:focus {
+        background-color: @proquest-brand;
+        color: #fff;
+      }
+    }
+    ul.nav.nav-stacked {
+      margin-left: 0;
+      background: #1e1e1e;
+      a:hover, a:focus {
+        background-color: #2d2d2d;
+      }
+    }
+    > li > ul.nav.nav-stacked > li {
+      > a {
+        padding-left: 30px;
+      }
+      > ul.nav.nav-stacked > li {
+        > a {
+          padding-left: 45px;
+        }
+        > ul.nav.nav-stacked > li {
+          > a {
+            padding-left: 60px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Pills
+// -------------------------
+.nav-pills {
+	> li {
+
+		// Links rendered as pills
+		> a {
+			border-radius: @nav-pills-border-radius;
+		}
+		+ li {
+			margin-left: 2px;
+		}
+
+		// Active state
+		&.active > a {
+			&,
+			&:hover,
+			&:focus {
+				color: @nav-pills-active-link-hover-color;
+				background-color: @nav-pills-active-link-hover-bg;
+			}
+		}
+	}
+}

@@ -1,0 +1,15 @@
+//
+// Badges
+// --------------------------------------------------
+
+
+// Base class
+.badge {
+
+  // Account for badges in navs
+  a.list-group-item.active > &,
+  .nav-pills > .active > a > & {
+    color: @badge-active-color;
+    background-color: @badge-active-bg;
+  }
+}

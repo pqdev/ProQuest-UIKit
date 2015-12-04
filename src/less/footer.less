@@ -1,0 +1,22 @@
+footer {
+	background-color:@gray;
+	color:darken(white, 10%);
+	padding:18px;
+	a, a:hover, a:focus {
+		color:darken(white, 10%);
+	}
+	p, ul {
+		margin:0;
+	}
+}
+
+@media (max-width: 768px) {
+	footer {
+		text-align: center;
+		p.pull-right, ul.pull-right,
+		p.pull-left, ul.pull-left{
+			width: 100%;
+			float: none !important;
+		}
+	}
+}

@@ -1,0 +1,536 @@
+//
+// Forms
+// --------------------------------------------------
+
+.form-control {
+  &[disabled],
+  &[readonly],
+  fieldset[disabled] & {
+    cursor: not-allowed;
+  }
+}
+
+// Special styles for iOS temporal inputs
+//
+// In Mobile Safari, setting `display: block` on temporal inputs causes the
+// text within the input to become vertically misaligned.
+// As a workaround, we set a pixel line-height that matches the
+// given height of the input. Since this fubars everything else, we have to
+// appropriately reset it for Internet Explorer and the size variations.
+
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"] {
+  line-height: @input-height-base;
+  // IE8+ misaligns the text within date inputs, so we reset
+  line-height: @line-height-base ~"\0";
+
+  &.input-sm {
+    line-height: @input-height-small;
+  }
+  &.input-lg {
+    line-height: @input-height-large;
+  }
+}
+
+// Checkboxes and radios
+//
+// Indent the labels to position radios/checkboxes as hanging controls.
+
+.form-inline > * {
+  margin-left: 7px !important;
+  margin-right: 7px !important;
+  &:first-child {
+    margin-left: 0 !important;
+  }
+  &:first-child {
+    margin-right: 0 !important;
+  }
+}
+
+.form-inline {
+  @media (min-width: @screen-sm) {
+    .radio,
+    .checkbox {
+      padding-left: 0;
+    }
+  }
+}
+
+div.styled-checkbox.checkbox, div.styled-radio.radio {
+  margin-left: 10px !important;
+}
+
+.form-inline > div.styled-checkbox.checkbox, .form-inline > div.styled-radio.radio {
+  margin-left: 20px !important;
+}
+
+.radio,
+.checkbox {
+  margin-right: 5px;
+  min-height: @line-height-computed; // clear the floating input if there is no label text
+}
+
+// Radios and checkboxes on same line
+.radio-inline,
+.checkbox-inline {
+  margin-top: 0;
+ }
+.radio-inline + .radio-inline,
+.checkbox-inline + .checkbox-inline {
+  margin-left: 0;
+}
+
+// Apply same disabled cursor tweak as for inputs
+// Some special care is needed because <label>s don't inherit their parent's `cursor`.
+//
+// Note: Neither radios nor checkboxes can be readonly.
+input[type="radio"],
+input[type="checkbox"] {
+  &[disabled],
+  &.disabled,
+  fieldset[disabled] & {
+    cursor: not-allowed;
+  }
+}
+// These classes are used directly on <label>s
+.radio-inline,
+.checkbox-inline {
+  &.disabled,
+  fieldset[disabled] & {
+    cursor: not-allowed;
+  }
+}
+// These classes are used on elements with <label> descendants
+.radio,
+.checkbox {
+  &.disabled,
+  fieldset[disabled] & {
+    label {
+      cursor: not-allowed;
+    }
+  }
+}
+
+// Feedback icon (requires .glyphicon classes)
+.form-control-feedback {
+  top: (@line-height-computed + 5); // Height of the `label` and its margin
+}
+
+// Reposition feedback icon if label is hidden with "screenreader only" state
+.has-feedback label.sr-only ~ .form-control-feedback {
+  top: 0;
+}
+
+// Feedback states
+.has-success {
+	.form-control-validation(@state-success-text; @state-success-text; @state-success-bg);
+}
+.has-warning {
+	.form-control-validation(@state-warning-text; @state-warning-text; @state-warning-bg);
+}
+.has-error {
+	.form-control-validation(@state-danger-text; @state-danger-text; @state-danger-bg);
+}
+
+// Inline forms
+//
+// Make forms appear inline(-block) by adding the `.form-inline` class. Inline
+// forms begin stacked on extra small (mobile) devices and then go inline when
+// viewports reach <768px.
+//
+// Requires wrapping inputs and labels with `.form-group` for proper display of
+// default HTML form controls and our custom form controls (e.g., input groups).
+//
+// Heads up! This is mixin-ed into `.navbar-form` in navbars.less.
+
+.input-group-addon {
+  .radio,
+  .checkbox {
+    min-height: 0;
+    margin: 2px -11px 0 -5px;
+  }
+  div.styled-checkbox.checkbox, div.styled-radio.radio {
+    margin-left: 5px !important;
+  }
+}
+
+// Horizontal forms
+//
+// Horizontal forms are built on grid classes and allow you to create forms with
+// labels on the left and inputs on the right.
+
+.form-horizontal {
+
+  // Validation states
+  //
+  // Reposition the icon because it's now within a grid column and columns have
+  // `position: relative;` on them. Also accounts for the grid gutter padding.
+  .has-feedback .form-control-feedback {
+    top: 0;
+  }
+  .form-control {
+      &:extend(.input-lg);
+  }
+  .form-group-sm {
+    .form-control {
+      &:extend(.input-sm);
+    }
+  }
+}
+
+// Copied from 0.2.0 of the Framework
+
+.radio > input[type=radio],
+.checkbox > input[type=checkbox] {
+  opacity: 0;
+  pointer-events: none;
+  & + label {
+    .user-select(none);
+  }
+  & + label::before {
+    content: '';
+    font-family: 'UX-Framework';
+    -webkit-font-smoothing: antialiased;
+    font-size: 9px;
+    line-height: 1;
+    background-image: linear-gradient(0deg, rgba(0,0,0,.02), rgba(0,0,0,0));
+    background-color: #f7f7f7;
+    color: #f7f7f7;
+    display: inline-block;
+    vertical-align: middle;
+    width: 15px;
+    height: 15px;
+    margin: -4px 6px 0px -30px;
+    padding: 2px;
+    text-align: center;
+    border: 1px solid rgba(0,0,0,.25);
+    box-shadow: 0 2px 0 rgba(0,0,0,.075), inset 0 1px 0px rgba(255,255,255,.5);
+    .input-group & {
+      box-shadow: inset 0 1px 0px rgba(255,255,255,.5);
+    }
+    .transition(~"background-color .3s, box-shadow .3s, border-color ease-in-out .15s");
+  }
+  &:checked + label::before {
+    background-color: @proquest-brand;
+    border-width: 0;
+    padding: 3px;
+    box-shadow: 0 1px 0px rgba(255,255,255,1), inset 0 2px 0 rgba(0,0,0,.075);
+  }
+  &:focus + label::before,
+  &:active + label::before,
+  & + label:active::before {
+    border: 2px solid tint(@proquest-brand, 10%);
+    padding: 1px;
+  }
+  &:checked:focus + label::before {
+    border-color: rgba(0,0,0,.15);
+  }
+  &:disabled + label {
+    cursor: not-allowed;
+    pointer-events: none; // Future-proof disabling of clicks
+    opacity: .65;
+    box-shadow: none;
+    text-shadow: none;
+  }
+  &:disabled + label::before, &:disabled + label::after {
+    box-shadow: none !important;
+    text-shadow: none !important;
+    background-image: none !important;
+  }
+}
+
+.radio.radio-lg,
+.checkbox.checkbox-lg {
+  margin-bottom: 13px;
+  margin-top: 10px;
+}
+
+.radio.radio-lg > input[type=radio],
+.checkbox.checkbox-lg > input[type=checkbox] {
+  opacity: 0;
+  & + label::before {
+    width: 24px;
+    height: 24px;
+    font-size: 13px;
+    line-height: 1;
+    padding: 5px;
+  }
+  &:focus + label::before,
+  &:active + label::before,
+  & + label:active::before {
+    padding: 3px;
+  }
+}
+
+.radio > input[type=radio] + label::before {
+  border-radius: 50%;
+}
+.checkbox > input[type=checkbox] + label::before {
+  content: '\41';
+  border-radius: 3px;
+}
+.checkbox > input[type=checkbox]:checked + label::before {
+  text-shadow: 0 1px 2px rgba(0,0,0,.15);
+}
+
+.checkbox-toggle {
+  position: relative;
+  padding-top: 7px;
+  & > input[type=checkbox] {
+    & + label {
+      padding-left: 14px;
+    }
+    & + label::before {
+      position: absolute;
+      top: 11px;
+      left: 0;
+      width: 38px;
+      height: 21px;
+      content: '\41\6e';
+      white-space: nowrap;
+      background-color: #c0c0c0;
+      border: none;
+      border-radius: 11px;
+      border-color: rgba(0,0,0,.15);
+      padding: 6px;
+      margin-left: 0;
+      letter-spacing: 8px;
+      color: #f7f7f7;
+      text-shadow: 0 1px 2px rgba(0,0,0,.15);
+      box-shadow: inset 0 2px 0 rgba(0,0,0,.075), 0 1px 0px rgba(255,255,255,1);
+    }
+    & + label::after {
+      content: '';
+      position: absolute;
+      top: 10px;
+      left: 0;
+      width: 15px;
+      height: 15px;
+      background-color: #f7f7f7;
+      border-radius: 50%;
+      box-shadow: 0 2px 0 rgba(0,0,0,.075), inset 0 1px 0 rgba(255,255,255,.5);
+      .transition(0.3s all);
+      .translate(3px, 0);
+    }
+    &:checked + label::before {
+      padding: 6px;
+    }
+    &:focus + label::before,
+    &:active + label::before,
+    & + label:active::before {
+      padding: 4px;
+      border-color: rgba(0,0,0,.15);
+    }
+    &:checked + label::before {
+      background-color: @proquest-brand;
+    }
+    &:checked + label::after {
+      .translate(20px, 0);
+    }
+  }
+}
+
+.selectbox-arrow {
+  content: '\4a';
+  font-family: 'UX-Framework';
+  position: relative;
+  top: -0.1em;
+  right: -0.4em;
+  display: block;
+  text-align: right;
+  color: @input-color;
+  font-size: 120%;
+}
+
+.selectbox.form-control {
+  position: relative;
+  .box-shadow(~"0 2px 0 rgba(0,0,0,.075)");
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0));
+  &:focus {
+    @shadow: 0 2px 0 rgba(0,0,0,.075), inset 0 0 0 1px @input-border-focus;
+    .box-shadow(@shadow);
+  }
+  &::after {
+    .selectbox-arrow;
+  }
+  &.disabled::after {
+    color: @gray;
+  }
+  & > .options {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: -1px;
+    overflow: hidden;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: @input-border-radius;
+    .transition(border-color ease-in-out .15s);
+    & > input[type=radio] {
+      display: none;
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+      &:checked + .option {
+        display: block;
+      }
+    }
+    & > .option {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding-right: 1.5em;
+      margin: 0;
+      background-color: transparent;
+      border: none;
+      box-shadow: none;
+      display: none;
+      border-radius: 0;
+      .user-select(none);
+      .transition(~"background-color .1s, color .1s");
+    }
+  }
+  &.open > .options {
+    height: auto;
+    border-color: @input-border-focus;
+    background-color: @dropdown-bg;
+    z-index: 1;
+    .box-shadow(~"0 5px 10px rgba(0,0,0,.2), inset 0 0 0 1px @{input-border-focus}");
+    & > input[type=radio] {
+      display: block; // This activates the radio buttons, but they're still not visible
+      &:focus + .option {
+        background-color: @component-active-bg;
+        color: @component-active-color;
+      }
+      &:disabled + .option {
+        cursor: not-allowed;
+        pointer-events: none; // Future-proof disabling of clicks
+        opacity: .65;
+        box-shadow: none;
+        text-shadow: none;
+        &:hover {
+          background-color: inherit;
+          color: inherit;
+        }
+      }
+      &:checked + .option::after {
+        content: '\41';
+        font-family: 'UX-Framework';
+        font-size: 80%;
+        position: absolute;
+        right: 0.5em;
+        padding-top: 0.3em;
+      }
+    }
+    & > .option {
+      display: block;
+    }
+  }
+}
+
+.select-wrapper.form-control>select {
+  &:focus {
+    outline: none;
+  }
+}
+
+select:not([multiple]):not([size]).form-control, .select-wrapper.form-control {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  .box-shadow(0 2px 0 rgba(0,0,0,.075));
+  line-height: 1.7;
+  &:focus {
+    outline: none;
+  }
+}
+
+.select-wrapper.form-control {
+  position: relative;
+  &:before {
+    .selectbox-arrow;
+    height: 30px;
+    margin: -1px -1px 0 0;
+    .ie & {
+      content: '';
+    }
+  }
+  > select {
+    position: relative;
+    top: -30px;
+    width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    background: transparent;
+    color: inherit;
+    margin: 0;
+  }
+}
+
+.selectbox.form-control,
+.selectbox.form-control.open > .options,
+select:not([multiple]):not([size]).form-control,
+.select-wrapper.form-control {
+  .has-error & {
+    border-color: @state-danger-text;
+    &:focus {
+      @shadow: 0 2px 0 rgba(0,0,0,.075), inset 0 0 0 1px @state-danger-text;
+      .box-shadow(@shadow);
+    }
+  }
+  .has-warning & {
+    border-color: @state-warning-text;
+    &:focus {
+      @shadow: 0 2px 0 rgba(0,0,0,.075), inset 0 0 0 1px @state-warning-text;
+      .box-shadow(@shadow);
+    }
+  }
+  .has-success & {
+    border-color: @state-success-text;
+    &:focus {
+      @shadow: 0 2px 0 rgba(0,0,0,.075), inset 0 0 0 1px @state-success-text;
+      .box-shadow(@shadow);
+    }
+  }
+}
+
+.selectbox.form-control.open > .options {
+  .has-error & {
+    @shadow: 0 2px 0 rgba(0,0,0,.075), inset 0 0 0 1px @state-danger-text;
+    .box-shadow(@shadow);
+  }
+  .has-warning & {
+    @shadow: 0 2px 0 rgba(0,0,0,.075), inset 0 0 0 1px @state-warning-text;
+    .box-shadow(@shadow);
+  }
+  .has-success & {
+    @shadow: 0 2px 0 rgba(0,0,0,.075), inset 0 0 0 1px @state-success-text;
+    .box-shadow(@shadow);
+  }
+}
+
+label {
+  font-weight: normal;
+}
+.help-block {
+  font-size: 81.25%;
+}
+
+// Copied from the Select2 extension
+.selectbox-offscreen, :focus.selectbox-offscreen {
+  clip: rect(0 0 0 0) !important;
+  width: 1px !important;
+  height: 1px !important;
+  border: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  position: absolute !important;
+  outline: 0 !important;
+  left: 0px !important;
+  top: 0px !important;
+}

@@ -1,0 +1,28 @@
+//
+// Dropdown menus
+// --------------------------------------------------
+
+
+// Disabled state
+//
+// Gray out text and ensure the hover/focus state remains gray
+
+.dropdown-menu > .disabled > a {
+// Nuke hover/focus effects
+  &:hover,
+  &:focus {
+    cursor: not-allowed;
+  }
+}
+
+// Allow for dropdowns to go bottom up (aka, dropup-menu)
+//
+// Just add .dropup after the standard .dropdown class and you're set, bro.
+
+.dropup,
+.navbar-fixed-bottom .dropdown {
+  // Different positioning for bottom up menu
+  .dropdown-menu {
+    margin-bottom: 1px;
+  }
+}

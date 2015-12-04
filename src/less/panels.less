@@ -1,0 +1,102 @@
+//
+// Panels
+// --------------------------------------------------
+
+
+// Base class
+.panel {
+  border-radius: 0;
+  .box-shadow(none);
+}
+
+// Optional heading
+.panel-heading {
+  .border-top-radius(0);
+}
+
+// Optional footer (stays gray in every modifier class)
+.panel-footer {
+  .border-bottom-radius(0);
+}
+
+
+// List groups in panels
+//
+// By default, space out list group content from panel headings to account for
+// any kind of custom content between the two.
+
+.panel {
+  > .list-group {
+
+    // Add border top radius for first one
+    &:first-child {
+      .list-group-item:first-child {
+        .border-top-radius(0);
+      }
+    }
+    // Add border bottom radius for last one
+    &:last-child {
+      .list-group-item:last-child {
+        .border-bottom-radius(0);
+      }
+    }
+  }
+}
+
+// Tables in panels
+//
+// Place a non-bordered `.table` within a panel (not within a `.panel-body`) and
+// watch it go full width.
+
+.panel {
+
+  // Add border top radius for first one
+  > .table:first-child,
+  > .table-responsive:first-child > .table:first-child {
+
+    > thead:first-child,
+    > tbody:first-child {
+      > tr:first-child {
+        td:first-child,
+        th:first-child {
+          border-top-left-radius: 0;
+        }
+        td:last-child,
+        th:last-child {
+          border-top-right-radius: 0;
+        }
+      }
+    }
+  }
+  // Add border bottom radius for last one
+  > .table:last-child,
+  > .table-responsive:last-child > .table:last-child {
+
+    > tbody:last-child,
+    > tfoot:last-child {
+      > tr:last-child {
+        td:first-child,
+        th:first-child {
+          border-bottom-left-radius: 0;
+        }
+        td:last-child,
+        th:last-child {
+          border-bottom-right-radius: 0;
+        }
+      }
+    }
+  }
+}
+
+// Collapsable panels (aka, accordion)
+//
+// Wrap a series of panels in `.panel-group` to turn them into an accordion with
+// the help of our collapse JavaScript plugin.
+
+.panel-group {
+
+  // Tighten up margin so it's only between panels
+  .panel {
+    border-radius: 0;
+  }
+}
