@@ -1,6 +1,6 @@
 {
-	"name": "proquest-uikit",
-	"version": "1.2.3",
+	"name": "ProQuest-UIKit",
+	"version": "1.3.0",
 	"main": "/dist/**",
 	"ignore": [
 		"/download"
