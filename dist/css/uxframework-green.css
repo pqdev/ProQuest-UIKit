@@ -1,4 +1,4 @@
-/* ProQuest-UIKit v1.3.0. Updated Wednesday, December 9th, 2015, 10:40 PM EST */
+/* ProQuest-UIKit v1.3.0. Updated Thursday, December 10th, 2015, 3:45 PM EST */
 @font-face {
   font-family: 'Roboto';
   src: url('../fonts/Roboto-Regular-webfont.eot');
@@ -2019,10 +2019,11 @@ footer p {
   text-align: right;
 }
 footer .footer-logo {
-  background: url('../images/pq-logo.svg') no-repeat 0 0;
+  background: url('../images/pq-logo.svg') no-repeat bottom;
   height: 42px;
   width: 166px;
   margin-top: 0;
+  opacity: 0.5;
 }
 .top-footer {
   background-color: #555;
@@ -2066,8 +2067,7 @@ footer .footer-logo {
     float: none !important;
   }
   footer .footer-logo {
-    margin: 0 auto;
-    margin-bottom: 20px;
+    margin: 0 auto 20px auto;
   }
 }
 .jumbotron {
