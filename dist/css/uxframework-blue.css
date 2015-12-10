@@ -1,4 +1,4 @@
-/* ProQuest-UIKit v1.3.0. Updated Friday, December 4th, 2015, 4:18 PM EST */
+/* ProQuest-UIKit v1.3.0. Updated Wednesday, December 9th, 2015, 10:40 PM EST */
 @font-face {
   font-family: 'Roboto';
   src: url('../fonts/Roboto-Regular-webfont.eot');
@@ -1999,8 +1999,10 @@ a.list-group-item.active > .badge,
 .navbar-fixed-bottom .dropdown .dropdown-menu {
   margin-bottom: 1px;
 }
+/** Footer **/
 footer {
-  background-color: #555555;
+  background-color: #494949;
+  overflow: hidden;
   color: #e6e6e6;
   padding: 18px;
 }
@@ -2013,8 +2015,47 @@ footer p,
 footer ul {
   margin: 0;
 }
+footer p {
+  text-align: right;
+}
+footer .footer-logo {
+  background: url('../images/pq-logo.svg') no-repeat 0 0;
+  height: 42px;
+  width: 166px;
+  margin-top: 0;
+}
+.top-footer {
+  background-color: #555;
+  color: #fff;
+  margin-top: 20px;
+  padding: 18px;
+  display: block;
+  clear: both;
+}
+.top-footer a {
+  color: #E6E6E6;
+}
+.top-footer h5 {
+  color: #E6E6E6;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.top-footer ul.footer-links {
+  list-style: outside none none;
+  padding-left: 0;
+}
+.top-footer ul.footer-links li {
+  margin-bottom: 7px;
+}
+/*--Mobile----------*/
 @media (max-width: 768px) {
+  .top-footer ul.footer-links {
+    margin-bottom: 25px;
+  }
   footer {
+    text-align: center;
+  }
+  footer p {
     text-align: center;
   }
   footer p.pull-right,
@@ -2023,6 +2064,10 @@ footer ul {
   footer ul.pull-left {
     width: 100%;
     float: none !important;
+  }
+  footer .footer-logo {
+    margin: 0 auto;
+    margin-bottom: 20px;
   }
 }
 .jumbotron {
