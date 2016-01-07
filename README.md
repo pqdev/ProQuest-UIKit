@@ -26,26 +26,25 @@ Note: If you are hard-coding these paths, then you are better-off copying the UI
 # Building with Grunt ?
 npm install --save grunt-contrib-copy 
 [Gruntfile.js] - We are assuming that you build into a folder called "dist" within your own project.
-   copy: {
-			dist: {
-				files: [
-					{
-						expand: true,
-						cwd: 'bower_components/proquest-uikit/dist/fonts',
-						dest: 'dist/styles/fonts',
-						src: ['**']
-					},
-					{
-						expand: true,
-						cwd: 'bower_components/proquest-uikit/dist/images',
-						dest: 'dist/images',
-						src: ['**']
-					}
-
-				]
-			}
+`   copy: {
+		dist: {
+			files: [
+				{
+					expand: true,
+					cwd: 'bower_components/proquest-uikit/dist/fonts',
+					dest: 'dist/styles/fonts',
+					src: ['**']
+				},
+				{
+					expand: true,
+					cwd: 'bower_components/proquest-uikit/dist/images',
+					dest: 'dist/images',
+					src: ['**']
+				}
+			]
 		}
-
+	}
+`
 # ProQuest-UIKit Developers and Operations Support:
 * To release a version of ProQuest-UIKit:
 grunt release --release=[release version]
