@@ -1,6 +1,6 @@
 {
 	"name": "proquest-uikit",
-	"version": "1.2.3",
+	"version": "1.2.4",
 	"repository": "https://github.com/sshepard/proquest-uikit",
 	"dependencies": {
 		"grunt": "^0.4.5",
