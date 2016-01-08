@@ -1,4 +1,4 @@
-/* proquest-uikit v1.2.4. Updated Friday, January 8th, 2016, 3:42 PM EST */
+/* ProQuest-UIKit v1.3.0. Updated Friday, January 8th, 2016, 3:49 PM EST */
 @font-face {
   font-family: 'Roboto';
   src: url('../fonts/Roboto-Regular-webfont.eot');
@@ -462,6 +462,10 @@ blockquote:after {
 .form-control[readonly],
 fieldset[disabled] .form-control {
   cursor: not-allowed;
+}
+.form-control:focus {
+  border-color: #5859A5;
+  box-shadow: inset 1px 2px 0 rgba(0, 0, 0, 0.075), inset 0 0 0 1px #118289;
 }
 input[type="date"],
 input[type="time"],
@@ -2000,8 +2004,10 @@ a.list-group-item.active > .badge,
 .navbar-fixed-bottom .dropdown .dropdown-menu {
   margin-bottom: 1px;
 }
+/** Footer **/
 footer {
-  background-color: #555555;
+  background-color: #494949;
+  overflow: hidden;
   color: #e6e6e6;
   padding: 18px;
 }
@@ -2014,8 +2020,48 @@ footer p,
 footer ul {
   margin: 0;
 }
+footer p {
+  text-align: right;
+}
+footer .footer-logo {
+  background: url('../images/pq-logo.svg') no-repeat bottom;
+  height: 42px;
+  width: 166px;
+  margin-top: 0;
+  opacity: 0.5;
+}
+.top-footer {
+  background-color: #555;
+  color: #fff;
+  margin-top: 20px;
+  padding: 18px;
+  display: block;
+  clear: both;
+}
+.top-footer a {
+  color: #E6E6E6;
+}
+.top-footer h5 {
+  color: #E6E6E6;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.top-footer ul.footer-links {
+  list-style: outside none none;
+  padding-left: 0;
+}
+.top-footer ul.footer-links li {
+  margin-bottom: 7px;
+}
+/*--Mobile----------*/
 @media (max-width: 768px) {
+  .top-footer ul.footer-links {
+    margin-bottom: 25px;
+  }
   footer {
+    text-align: center;
+  }
+  footer p {
     text-align: center;
   }
   footer p.pull-right,
@@ -2024,6 +2070,9 @@ footer ul {
   footer ul.pull-left {
     width: 100%;
     float: none !important;
+  }
+  footer .footer-logo {
+    margin: 0 auto 20px auto;
   }
 }
 .jumbotron {
