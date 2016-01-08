@@ -1,4 +1,4 @@
-/* proquest-uikit v1.2.3. Updated Friday, January 8th, 2016, 2:35 PM EST */
+/* proquest-uikit v1.2.3. Updated Friday, January 8th, 2016, 3:03 PM EST */
 @font-face {
   font-family: 'Roboto';
   src: url('../fonts/Roboto-Regular-webfont.eot');
@@ -68,8 +68,8 @@
 }
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url('../fonts/uxf-regular.eot');
-  src: url('../fonts/uxf-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/uxf-regular.woff2') format('woff2'), url('../fonts/uxf-regular.woff') format('woff'), url('../fonts/uxf-regular.ttf') format('truetype'), url('../fonts/uxf-regular.svg#uxfregular') format('svg');
+  src: url('../fonts/glyphicons-halflings-regular.eot');
+  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#uxfregular') format('svg');
 }
 body {
   font-family: 'Roboto', Helvetica, Arial, sans-serif;
