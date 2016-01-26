@@ -106,7 +106,7 @@ module.exports = function(grunt) {
 			// Package /dist/.
 			download: {
 				options: {
-					archive: 'download/<%= bower.name %>-<%= bower.version %>.zip'
+					archive: 'download/<%= bower.name %>.zip'
 				},
 				files: [
 					{src: ['dist/**']}
