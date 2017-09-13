@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/pqdev/ProQuest-UIKit#readme",
   "main": "dist",
-  "files": ["!bower_components", "!node_components", "!download"],
+  "files": ["**", "!bower_components", "!node_components", "!download"],
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-autoprefixer": "^0.7.3",
