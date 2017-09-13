@@ -1,4 +1,4 @@
-/* ProQuest-UIKit v1.3.0. Updated Tuesday, January 26th, 2016, 4:09 PM EST */
+/* ProQuest-UIKit v1.3.0. Updated Wednesday, September 13th, 2017, 1:53 PM EDT */
 @font-face {
   font-family: 'Roboto';
   src: url('../fonts/Roboto-Regular-webfont.eot');
@@ -88,7 +88,6 @@ a:focus {
   text-decoration: underline;
 }
 a:focus {
-  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }

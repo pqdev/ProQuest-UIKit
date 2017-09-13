@@ -124,7 +124,7 @@ module.exports = function(grunt) {
 			},
 			bsTmp: {
 				expand: true,
-				cwd: 'bower_components/bootstrap/dist',
+				cwd: 'node_modules/bootstrap/dist',
 				src: ['fonts/*', 'css/**', '!css/*theme*', 'js/bootstrap.min.js'],
 				dest: '.tmp/'
 			},
