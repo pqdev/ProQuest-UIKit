@@ -21,7 +21,8 @@
   "files": [
     "**",
     "!node_components",
-    "!download"
+    "!download",
+    "!.git"
   ],
   "devDependencies": {
     "grunt": "0.4.5",
