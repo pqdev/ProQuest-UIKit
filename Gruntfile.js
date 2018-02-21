@@ -9,7 +9,7 @@ module.exports = function(grunt) {
 	require('time-grunt')(grunt);
 
 	// Configurable paths for the application
-	var appConfig = require('./bower.json');
+	var appConfig = require('./package.json');
 
 	// Helper function to reduce repetition
 	var colors = ['blue', 'green', 'olive', 'purple', 'teal'];
@@ -36,7 +36,7 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 
 		// Project settings
-		bower: appConfig,
+		package: appConfig,
 
 		// Empties folders to start fresh
 		clean: {
@@ -97,7 +97,7 @@ module.exports = function(grunt) {
 		less: {
 			options: {
 				compile: true,
-				banner: '/* <%= bower.name %> v<%= bower.version %>. Updated <%= grunt.template.today("dddd, mmmm dS, yyyy, h:MM TT Z") %> */'
+				banner: '/* <%= package.name %> v<%= package.version %>. Updated <%= grunt.template.today("dddd, mmmm dS, yyyy, h:MM TT Z") %> */'
 			},
 			all: lessConfig()
 		},
@@ -106,7 +106,7 @@ module.exports = function(grunt) {
 			// Package /dist/.
 			download: {
 				options: {
-					archive: 'download/<%= bower.name %>.zip'
+					archive: 'download/<%= package.name %>.zip'
 				},
 				files: [
 					{src: ['dist/**']}
