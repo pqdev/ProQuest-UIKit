@@ -17,10 +17,10 @@
     "url": "https://github.com/pqdev/ProQuest-UIKit/issues"
   },
   "homepage": "https://github.com/pqdev/ProQuest-UIKit#readme",
-  "main": "src",
+  "main": ".",
   "files": [
-    "**",
-    "../dist",
+    "src",
+    "dist",
     "!node_components",
     "!download",
     "!.git"
