@@ -20,7 +20,7 @@
   "main": "src",
   "files": [
     "**",
-    "dist",
+    "../dist",
     "!node_components",
     "!download",
     "!.git"
