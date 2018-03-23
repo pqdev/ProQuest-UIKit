@@ -26,3 +26,9 @@ Note: If you are hard-coding these paths, then you are better-off copying the UI
 ## ProQuest-UIKit Developers and Operations Support:
 To build a version of ProQuest-UIKit:
 `grunt release --release=[release version]`
+
+## Deploy to CDN
+http://devops-jenkins.pre.proquest.com:8080/view/PQD/view/prod/view/ui-kit/
+
+Put release tag in "RELEASE" field.
+The content of /dist directly is copied from GitHub to https://pq-static-content.proquest.com/proquestux/[tag]/ 
