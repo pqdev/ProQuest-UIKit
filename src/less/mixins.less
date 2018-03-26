@@ -1,40 +1,96 @@
 // Mixins
 // --------------------------------------------------
 
+// This "GRUNT" section needs to be uncommented for Grunt to work and the following "NODEJS" section needs to be commented.
+// When checking-in, "GRUNT" section must be commented.
+/*
+// START GRUNT
+
 // Utilities
-@import "bower_components/bootstrap/less/mixins/hide-text.less";
-@import "bower_components/bootstrap/less/mixins/opacity.less";
+@import "../../node_modules/bootstrap/less/mixins/hide-text.less";
+@import "../../node_modules/bootstrap/less/mixins/opacity.less";
 @import "mixins/image.less";
-@import "bower_components/bootstrap/less/mixins/labels.less";
-@import "bower_components/bootstrap/less/mixins/reset-filter.less";
-@import "bower_components/bootstrap/less/mixins/resize.less";
-@import "bower_components/bootstrap/less/mixins/responsive-visibility.less";
-@import "bower_components/bootstrap/less/mixins/size.less";
-@import "bower_components/bootstrap/less/mixins/tab-focus.less";
-@import "bower_components/bootstrap/less/mixins/text-emphasis.less";
-@import "bower_components/bootstrap/less/mixins/text-overflow.less";
-@import "bower_components/bootstrap/less/mixins/vendor-prefixes.less";
+@import "../../node_modules/bootstrap/less/mixins/labels.less";
+@import "../../node_modules/bootstrap/less/mixins/reset-filter.less";
+@import "../../node_modules/bootstrap/less/mixins/resize.less";
+@import "../../node_modules/bootstrap/less/mixins/responsive-visibility.less";
+@import "../../node_modules/bootstrap/less/mixins/size.less";
+@import "../../node_modules/bootstrap/less/mixins/tab-focus.less";
+@import "../../node_modules/bootstrap/less/mixins/text-emphasis.less";
+@import "../../node_modules/bootstrap/less/mixins/text-overflow.less";
+@import "../../node_modules/bootstrap/less/mixins/vendor-prefixes.less";
 
 // Components
-@import "bower_components/bootstrap/less/mixins/alerts.less";
+@import "../../node_modules/bootstrap/less/mixins/alerts.less";
 @import "mixins/buttons.less";
-@import "bower_components/bootstrap/less/mixins/panels.less";
-@import "bower_components/bootstrap/less/mixins/pagination.less";
-@import "bower_components/bootstrap/less/mixins/list-group.less";
-@import "bower_components/bootstrap/less/mixins/nav-divider.less";
+@import "../../node_modules/bootstrap/less/mixins/panels.less";
+@import "../../node_modules/bootstrap/less/mixins/pagination.less";
+@import "../../node_modules/bootstrap/less/mixins/list-group.less";
+@import "../../node_modules/bootstrap/less/mixins/nav-divider.less";
 @import "mixins/forms.less";
-@import "bower_components/bootstrap/less/mixins/progress-bar.less";
-@import "bower_components/bootstrap/less/mixins/table-row.less";
+@import "../../node_modules/bootstrap/less/mixins/progress-bar.less";
+@import "../../node_modules/bootstrap/less/mixins/table-row.less";
 
 // Skins
-@import "bower_components/bootstrap/less/mixins/background-variant.less";
-@import "bower_components/bootstrap/less/mixins/border-radius.less";
+@import "../../node_modules/bootstrap/less/mixins/background-variant.less";
+@import "../../node_modules/bootstrap/less/mixins/border-radius.less";
 @import "mixins/gradients.less";
 @import "mixins/alerts.less";
 
 // Layout
-@import "bower_components/bootstrap/less/mixins/clearfix.less";
-@import "bower_components/bootstrap/less/mixins/center-block.less";
-@import "bower_components/bootstrap/less/mixins/nav-vertical-align.less";
-@import "bower_components/bootstrap/less/mixins/grid-framework.less";
+@import "../../node_modules/bootstrap/less/mixins/clearfix.less";
+@import "../../node_modules/bootstrap/less/mixins/center-block.less";
+@import "../../node_modules/bootstrap/less/mixins/nav-vertical-align.less";
+@import "../../node_modules/bootstrap/less/mixins/grid-framework.less";
 @import "mixins/grid.less";
+
+// END GRUNT
+*/
+
+
+/*
+The following "NODEJS" section will work in angular-cli, webpack, and some other build systems.
+When checking-in, uncomment the code below and comment the "GRUNT" code above.
+ */
+
+// START NODEJS
+
+// Utilities
+@import "~bootstrap/less/mixins/hide-text.less";
+@import "~bootstrap/less/mixins/opacity.less";
+@import "mixins/image.less";
+@import "~bootstrap/less/mixins/labels.less";
+@import "~bootstrap/less/mixins/reset-filter.less";
+@import "~bootstrap/less/mixins/resize.less";
+@import "~bootstrap/less/mixins/responsive-visibility.less";
+@import "~bootstrap/less/mixins/size.less";
+@import "~bootstrap/less/mixins/tab-focus.less";
+@import "~bootstrap/less/mixins/text-emphasis.less";
+@import "~bootstrap/less/mixins/text-overflow.less";
+@import "~bootstrap/less/mixins/vendor-prefixes.less";
+
+// Components
+@import "~bootstrap/less/mixins/alerts.less";
+@import "mixins/buttons.less";
+@import "~bootstrap/less/mixins/panels.less";
+@import "~bootstrap/less/mixins/pagination.less";
+@import "~bootstrap/less/mixins/list-group.less";
+@import "~bootstrap/less/mixins/nav-divider.less";
+@import "mixins/forms.less";
+@import "~bootstrap/less/mixins/progress-bar.less";
+@import "~bootstrap/less/mixins/table-row.less";
+
+// Skins
+@import "~bootstrap/less/mixins/background-variant.less";
+@import "~bootstrap/less/mixins/border-radius.less";
+@import "mixins/gradients.less";
+@import "mixins/alerts.less";
+
+// Layout
+@import "~bootstrap/less/mixins/clearfix.less";
+@import "~bootstrap/less/mixins/center-block.less";
+@import "~bootstrap/less/mixins/nav-vertical-align.less";
+@import "~bootstrap/less/mixins/grid-framework.less";
+@import "mixins/grid.less";
+
+// END NODEJS
