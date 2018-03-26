@@ -10,14 +10,14 @@ in index.html:
 
 ## All files in CDN:
 `https://pq-static-content.proquest.com/proquestux/{version}/`
-#### css
+#### css/
 + bootstrap.css
 + uxframework-blue.css
 + uxframework-green.css
 + uxframework-olive.css
 + uxframework-purple.css
 + uxframework-teal.css
-#### fonts
+#### fonts/
 + aleo-bold-webfont.eot
 + aleo-bold-webfont.svg
 + aleo-bold-webfont.ttf
@@ -71,12 +71,12 @@ in index.html:
 + UX-Framework.svg
 + UX-Framework.ttf
 + UX-Framework.woff
-#### images
+#### images/
 + pq-logo.png
 + pq-logo.svg
 + pq-logo-header.png
 + pq-logo-header.svg
-#### js
+#### js/
 - bootstrap.min.js
 
 ## Include UIKit into your project by using NPM:
