@@ -90,8 +90,8 @@ Note: If you are hard-coding these paths, then you are better-off copying the UI
 
 ## If you use LESS, then you may import a theme:
 ```less
-@import "~bootstrap/less/bootstrap";
-@import "~proquest-uikit/src/less/uxframework-blue";
+@import "bootstrap/less/bootstrap";
+@import "proquest-uikit/src/less/uxframework-blue";
 @images: '/assets/img/';
 @image-path: @images;
 @icons: '/assets/img/icons/';
