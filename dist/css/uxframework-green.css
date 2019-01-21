@@ -1,4 +1,4 @@
-/* proquest-uikit v1.4.0. Updated Monday, March 26th, 2018, 1:22 PM EDT */
+/* proquest-uikit v1.4.1. Updated Monday, January 21st, 2019, 4:25 PM EST */
 @font-face {
   font-family: 'Roboto';
   src: url('../fonts/Roboto-Regular-webfont.eot');
@@ -66,6 +66,49 @@
   font-weight: normal;
   font-style: normal;
 }
+/*
+The following "NODEJS" section will work in angular-cli, webpack, and some other build systems.
+When checking-in, uncomment the code below and comment the "GRUNT" code above.
+ */
+/*
+// Utilities
+@import "~bootstrap/less/mixins/hide-text.less";
+@import "~bootstrap/less/mixins/opacity.less";
+@import "mixins/image.less";
+@import "~bootstrap/less/mixins/labels.less";
+@import "~bootstrap/less/mixins/reset-filter.less";
+@import "~bootstrap/less/mixins/resize.less";
+@import "~bootstrap/less/mixins/responsive-visibility.less";
+@import "~bootstrap/less/mixins/size.less";
+@import "~bootstrap/less/mixins/tab-focus.less";
+@import "~bootstrap/less/mixins/text-emphasis.less";
+@import "~bootstrap/less/mixins/text-overflow.less";
+@import "~bootstrap/less/mixins/vendor-prefixes.less";
+
+// Components
+@import "~bootstrap/less/mixins/alerts.less";
+@import "mixins/buttons.less";
+@import "~bootstrap/less/mixins/panels.less";
+@import "~bootstrap/less/mixins/pagination.less";
+@import "~bootstrap/less/mixins/list-group.less";
+@import "~bootstrap/less/mixins/nav-divider.less";
+@import "mixins/forms.less";
+@import "~bootstrap/less/mixins/progress-bar.less";
+@import "~bootstrap/less/mixins/table-row.less";
+
+// Skins
+@import "~bootstrap/less/mixins/background-variant.less";
+@import "~bootstrap/less/mixins/border-radius.less";
+@import "mixins/gradients.less";
+@import "mixins/alerts.less";
+
+// Layout
+@import "~bootstrap/less/mixins/clearfix.less";
+@import "~bootstrap/less/mixins/center-block.less";
+@import "~bootstrap/less/mixins/nav-vertical-align.less";
+@import "~bootstrap/less/mixins/grid-framework.less";
+@import "mixins/grid.less";
+*/
 body {
   font-family: 'Roboto', Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -1985,8 +2028,8 @@ a.list-group-item.active > .badge,
 [data-toggle="buttons"] > .btn > input[type="checkbox"] {
   position: absolute;
   z-index: -1;
-  opacity: 0;
   filter: alpha(opacity=0);
+  opacity: 0;
 }
 .dropdown-menu > .disabled > a:hover,
 .dropdown-menu > .disabled > a:focus {
@@ -2521,16 +2564,16 @@ div.pq-logo {
   box-shadow: none;
 }
 .panel-heading {
-  border-top-right-radius: 0;
   border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 .panel-footer {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
 .panel > .list-group:first-child .list-group-item:first-child {
-  border-top-right-radius: 0;
   border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 .panel > .list-group:last-child .list-group-item:last-child {
   border-bottom-right-radius: 0;
