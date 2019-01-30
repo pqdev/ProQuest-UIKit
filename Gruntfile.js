@@ -65,7 +65,7 @@ module.exports = function(grunt) {
 		// Add vendor prefixed styles
 		autoprefixer: {
 			options: {
-				browsers: ['last 2 version', 'ie 8', 'ie 9', 'ie 10']
+				browsers: ['last 2 version', 'ie 11']
 			},
 			dist: {
 				files: [
