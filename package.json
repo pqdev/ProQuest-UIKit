@@ -1,9 +1,9 @@
 {
-  "name": "proquest-uikit",
+  "name": "@pqdev/proquest-uikit",
   "version": "1.5.1",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pqdev/ProQuest-UIKit.git"
+    "url": "git+https://github.com/pqdev/ProQuest-UIKit.git"
   },
   "dependencies": {
     "bootstrap": "~3.4.1",
@@ -50,5 +50,5 @@
     "proquest"
   ],
   "author": "uxframework@proquest.com",
-  "license": "GNU"
+  "license": "GPL-3.0-or-later"
 }
