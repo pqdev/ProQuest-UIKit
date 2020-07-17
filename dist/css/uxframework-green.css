@@ -1,18 +1,18 @@
-/* ProQuest-UIKit v1.3.0. Updated Wednesday, September 13th, 2017, 1:53 PM EDT */
+/* proquest-uikit v1.5.1. Updated Wednesday, October 2nd, 2019, 10:28 AM EDT */
 @font-face {
   font-family: 'Roboto';
   src: url('../fonts/Roboto-Regular-webfont.eot');
-  src: url('../fonts/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/Roboto-Regular-webfont.woff') format('woff'), url('../fonts/Roboto-Regular-webfont.ttf') format('truetype'), url('../fonts/Roboto-Regular-webfont#Roboto') format('svg');
+  src: url('../fonts/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/Roboto-Regular-webfont.woff') format('woff'), url('../fonts/Roboto-Regular-webfont.ttf') format('truetype'), url('../fonts/Roboto-Regular-webfont.svg#Roboto') format('svg');
 }
 @font-face {
   font-family: 'Roboto Light';
   src: url('../fonts/Roboto-Light-webfont.eot');
-  src: url('../fonts/Roboto-Light-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/Roboto-Light-webfont.woff') format('woff'), url('../fonts/Roboto-Light-webfont.ttf') format('truetype'), url('../fonts/Roboto-Light-webfont#Roboto Light') format('svg');
+  src: url('../fonts/Roboto-Light-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/Roboto-Light-webfont.woff') format('woff'), url('../fonts/Roboto-Light-webfont.ttf') format('truetype'), url('../fonts/Roboto-Light-webfont.svg#Roboto Light') format('svg');
 }
 @font-face {
   font-family: 'Roboto Condensed';
   src: url('../fonts/RobotoCondensed-Regular-webfont.eot');
-  src: url('../fonts/RobotoCondensed-Regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/RobotoCondensed-Regular-webfont.woff') format('woff'), url('../fonts/RobotoCondensed-Regular-webfont.ttf') format('truetype'), url('../fonts/RobotoCondensed-Regular-webfont#Roboto Condensed') format('svg');
+  src: url('../fonts/RobotoCondensed-Regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/RobotoCondensed-Regular-webfont.woff') format('woff'), url('../fonts/RobotoCondensed-Regular-webfont.ttf') format('truetype'), url('../fonts/RobotoCondensed-Regular-webfont.svg#Roboto Condensed') format('svg');
 }
 @font-face {
   font-family: 'aleobold';
@@ -66,11 +66,50 @@
   font-weight: normal;
   font-style: normal;
 }
-@font-face {
-  font-family: 'Glyphicons Halflings';
-  src: url('../fonts/glyphicons-halflings-regular.eot');
-  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#uxfregular') format('svg');
-}
+/*
+The following "NODEJS" section will work in angular-cli, webpack, and some other build systems.
+When checking-in, uncomment the code below and comment the "GRUNT" code above.
+ */
+/*
+
+// Utilities
+@import "bootstrap/less/mixins/hide-text.less";
+@import "bootstrap/less/mixins/opacity.less";
+@import "mixins/image.less";
+@import "bootstrap/less/mixins/labels.less";
+@import "bootstrap/less/mixins/reset-filter.less";
+@import "bootstrap/less/mixins/resize.less";
+@import "bootstrap/less/mixins/responsive-visibility.less";
+@import "bootstrap/less/mixins/size.less";
+@import "bootstrap/less/mixins/tab-focus.less";
+@import "bootstrap/less/mixins/text-emphasis.less";
+@import "bootstrap/less/mixins/text-overflow.less";
+@import "bootstrap/less/mixins/vendor-prefixes.less";
+
+// Components
+@import "bootstrap/less/mixins/alerts.less";
+@import "mixins/buttons.less";
+@import "bootstrap/less/mixins/panels.less";
+@import "bootstrap/less/mixins/pagination.less";
+@import "bootstrap/less/mixins/list-group.less";
+@import "bootstrap/less/mixins/nav-divider.less";
+@import "mixins/forms.less";
+@import "bootstrap/less/mixins/progress-bar.less";
+@import "bootstrap/less/mixins/table-row.less";
+
+// Skins
+@import "bootstrap/less/mixins/background-variant.less";
+@import "bootstrap/less/mixins/border-radius.less";
+@import "mixins/gradients.less";
+@import "mixins/alerts.less";
+
+// Layout
+@import "bootstrap/less/mixins/clearfix.less";
+@import "bootstrap/less/mixins/center-block.less";
+@import "bootstrap/less/mixins/nav-vertical-align.less";
+@import "bootstrap/less/mixins/grid-framework.less";
+@import "mixins/grid.less";
+*/
 body {
   font-family: 'Roboto', Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -768,8 +807,6 @@ fieldset[disabled] .checkbox label {
   border-radius: 50%;
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.075), inset 0 1px 0 rgba(255, 255, 255, 0.5);
   transition: 0.3s all;
-  -webkit-transform: translate(3px, 0);
-  -ms-transform: translate(3px, 0);
   transform: translate(3px, 0);
 }
 .checkbox-toggle > input[type=checkbox]:checked + label::before {
@@ -785,8 +822,6 @@ fieldset[disabled] .checkbox label {
   background-color: #2E8363;
 }
 .checkbox-toggle > input[type=checkbox]:checked + label::after {
-  -webkit-transform: translate(20px, 0);
-  -ms-transform: translate(20px, 0);
   transform: translate(20px, 0);
 }
 .selectbox-arrow {
@@ -1992,8 +2027,8 @@ a.list-group-item.active > .badge,
 [data-toggle="buttons"] > .btn > input[type="checkbox"] {
   position: absolute;
   z-index: -1;
-  opacity: 0;
   filter: alpha(opacity=0);
+  opacity: 0;
 }
 .dropdown-menu > .disabled > a:hover,
 .dropdown-menu > .disabled > a:focus {
@@ -2528,16 +2563,16 @@ div.pq-logo {
   box-shadow: none;
 }
 .panel-heading {
-  border-top-right-radius: 0;
   border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 .panel-footer {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
 .panel > .list-group:first-child .list-group-item:first-child {
-  border-top-right-radius: 0;
   border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 .panel > .list-group:last-child .list-group-item:last-child {
   border-bottom-right-radius: 0;
