@@ -5,8 +5,10 @@ https://github.com/pqdev/ProQuest-UIKit/tree/master/download
 
 ## Include UIKit into your project by using CDN (easiest integration!):
 in index.html:
-* &lt;link href="https://pq-static-content.proquest.com/proquestux/1.5.1/css/bootstrap.min.css" rel="stylesheet"&gt;
-* &lt;link href="https://pq-static-content.proquest.com/proquestux/1.5.1/css/uxframework-blue.min.css" rel="stylesheet"&gt;
+```html
+<link href="https://pq-static-content.proquest.com/proquestux/1.5.1/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://pq-static-content.proquest.com/proquestux/1.5.1/css/uxframework-blue.min.css" rel="stylesheet">
+```
 
 ## All files in CDN:
 `https://pq-static-content.proquest.com/proquestux/{version}/`
@@ -80,22 +82,19 @@ in index.html:
 - bootstrap.min.js
 
 ## Include UIKit into your project by using NPM:
-`npm i --save github:pqdev/proquest-uikit#npm2`
-manually add to package.json should now contain:  `"proquest-uikit": "pqdev/ProQuest-UIKit"`
-
-## To include UIKit in your project using CSS:
-You can point to one of the color-coded themes, like "./node_modules/proquest-uikit/dist/uxframework-blue.css"
-
-Note: If you are hard-coding these paths, then you are better-off copying the UIKit "dist" directory contents into your project's source code.
+`npm i proquest-uikit
 
 ## If you use LESS, then you may import a theme:
 ```less
-@import "bootstrap/less/bootstrap";
-@import "proquest-uikit/src/less/uxframework-blue";
+@import '../../node_modules/proquest-uikit/src/less/brand-colors';
 @images: '/assets/img/';
-@image-path: @images;
 @icons: '/assets/img/icons/';
-@icon-font-path: '/styles/fonts/';
+
+/* file paths */
+@image-path: @images;
+
+// Theme color
+@proquest-brand: @proquest-blue;
 ```
 
 ## ProQuest-UIKit Developers and Operations Support:
