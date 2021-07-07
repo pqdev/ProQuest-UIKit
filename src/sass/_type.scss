@@ -1,0 +1,60 @@
+h1, .h1,
+h2, .h2 {
+    font-family:$font-family-serif;
+    font-weight: normal;
+    color: $gray-700;
+    &.light {
+        font-family: $font-family-serif-light;
+        
+    }
+}
+
+h3, .h3 {
+    font-family: $font-family-sans-serif;
+    font-weight: norma;
+    color: $gray-700;
+    &.light {
+        font-family: $font-family-sans-serif-light;
+    }
+}
+
+h4, .h4 {
+    font-family: $font-family-sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $proquest-brand;
+    letter-spacing: .15em;
+    &.light {
+        font-weight: 400;
+    }
+    &.condensed {
+        font-size: 20px;
+        font-weight: normal;
+    }
+}
+
+h5, .h5 {
+    font-family: $font-family-sans-serif;
+    font-weight: 500;
+    color: $gray-700;
+    &.light {
+        font-weight: 400;
+    }
+    &.condensed {
+        font-size: 14px;
+        font-weight: bold;
+    }
+}
+
+h6, .h6 {
+    font-family: $font-family-sans-serif;
+    font-weight: 700;
+    color: $proquest-brand;
+    &.light {
+        font-weight: 500;
+    }
+    &.condensed{
+        font-size: 14px;
+        font-weight: bold;
+    }
+}

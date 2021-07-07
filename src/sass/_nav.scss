@@ -1,0 +1,36 @@
+// Custom nav adds (emulating UX Framework Site)
+
+// .nav {
+//     background-color: $nav-link-background-color;
+//   }
+
+  //
+  // Pills
+  //
+  
+  .nav-gray-pq {
+    //border-bottom: 3px solid transparent;
+    background-color: $nav-link-background-color;
+    
+    .nav-link {
+      //
+      background: none;
+      border: 0;
+      @include border-radius($nav-pills-border-radius);
+      border-bottom: 3px solid transparent;
+    }
+  
+    .nav-link.active,
+    .show > .nav-link {
+      color: $nav-pills-link-active-color;
+      @include gradient-bg($nav-pills-link-active-bg);
+      border-bottom: 3px solid $proquest-brand;
+    }
+  }
+
+  .hover-light {
+      &:hover {
+        background-color: $nav-pills-hover-color;
+        
+      }
+  }
