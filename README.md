@@ -78,8 +78,6 @@ in index.html:
 + pq-logo.svg
 + pq-logo-header.png
 + pq-logo-header.svg
-+ pq-logo-clarivate.png
-+ pq-logo-clarivate.svg
 #### js/
 - bootstrap.min.js
 
