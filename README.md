@@ -6,8 +6,8 @@ https://github.com/pqdev/ProQuest-UIKit/tree/master/download
 ## Include UIKit into your project by using CDN (easiest integration!):
 in index.html:
 ```html
-<link href="https://pq-static-content.proquest.com/proquestux/1.5.1/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://pq-static-content.proquest.com/proquestux/1.5.1/css/uxframework-blue.min.css" rel="stylesheet">
+<link href="https://pq-static-content.proquest.com/proquestux/1.5.3/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://pq-static-content.proquest.com/proquestux/1.5.3/css/uxframework-blue.min.css" rel="stylesheet">
 ```
 
 ## All files in CDN:
@@ -78,6 +78,8 @@ in index.html:
 + pq-logo.svg
 + pq-logo-header.png
 + pq-logo-header.svg
++ pq-clarivate-logo.png
++ pq-clarivate-logo.svg
 #### js/
 - bootstrap.min.js
 
