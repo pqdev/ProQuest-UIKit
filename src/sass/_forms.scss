@@ -1,67 +1,67 @@
-// Forms (color variables)
+// // Forms (color variables)
 
-$pq-focus-color-opacity:     .40;
-$pq-focus-color:             rgba($proquest-brand, $pq-focus-color-opacity);
-$pq-focus-box-shadow:        0 0 0 .25rem $pq-focus-color;
-$pq-focus-border-color:      tint-color($proquest-brand, 50%);
-
-
-// -------------------------------------------------------------------------
-// Form Select
-$form-select-pq-focus-border-color:     $pq-focus-border-color;             // Custom Add
-$form-select-pq-focus-box-shadow:       0 0 0 .25rem $pq-focus-color;       // Custom Add
-$form-select-pq-focus-border-color:     $pq-focus-border-color;             // Custom Add
+// $pq-focus-color-opacity:     .40;
+// $pq-focus-color:             rgba($proquest-brand, $pq-focus-color-opacity);
+// $pq-focus-box-shadow:        0 0 0 .25rem $pq-focus-color;
+// $pq-focus-border-color:      tint-color($proquest-brand, 50%);
 
 
-.form-select-pq {
+// // -------------------------------------------------------------------------
+// // Form Select
+// $form-select-pq-focus-border-color:     $pq-focus-border-color;             // Custom Add
+// $form-select-pq-focus-box-shadow:       0 0 0 .25rem $pq-focus-color;       // Custom Add
+// $form-select-pq-focus-border-color:     $pq-focus-border-color;             // Custom Add
 
-    &:focus {
-        border-color: $form-select-pq-focus-border-color !important;
-        outline: 0;
-        @if $enable-shadows {
-          @include box-shadow($form-select-box-shadow, $form-select-pq-focus-box-shadow);
-        } @else {
-          // Avoid using mixin so we can pass custom focus shadow properly
-          box-shadow: $form-select-pq-focus-box-shadow !important;
-        }
-    }
-}
 
-// --------------------------------------------------------------------------
-// Form Checks/Radios
+// .form-select-pq {
 
-$form-check-pq-focus-border:           $pq-focus-border-color;
-$form-check-pq-focus-box-shadow:       $pq-focus-box-shadow;
+//     &:focus {
+//         border-color: $form-select-pq-focus-border-color !important;
+//         outline: 0;
+//         @if $enable-shadows {
+//           @include box-shadow($form-select-box-shadow, $form-select-pq-focus-box-shadow);
+//         } @else {
+//           // Avoid using mixin so we can pass custom focus shadow properly
+//           box-shadow: $form-select-pq-focus-box-shadow !important;
+//         }
+//     }
+// }
 
-.form-check-pq {
+// // --------------------------------------------------------------------------
+// // Form Checks/Radios
 
-    &:focus {
-        border-color: $form-check-pq-focus-border !important;
-        outline: 0;
-        box-shadow: $form-check-pq-focus-box-shadow !important;
-    }
+// $form-check-pq-focus-border:           $pq-focus-border-color;
+// $form-check-pq-focus-box-shadow:       $pq-focus-box-shadow;
+
+// .form-check-pq {
+
+//     &:focus {
+//         border-color: $form-check-pq-focus-border !important;
+//         outline: 0;
+//         box-shadow: $form-check-pq-focus-box-shadow !important;
+//     }
     
-      &:checked {
-        background-color: $proquest-brand !important;
-        border-color: $proquest-brand !important;
-    }
-}
+//       &:checked {
+//         background-color: $proquest-brand !important;
+//         border-color: $proquest-brand !important;
+//     }
+// }
 
-// --------------------------------------------------------------------------
-// Form Control (Text-Input)
+// // --------------------------------------------------------------------------
+// // Form Control (Text-Input)
 
-.form-control-pq {
+// .form-control-pq {
 
-    &:focus {
-        color: $pq-focus-color !important;
-        background-color: $input-focus-bg;
-        border-color: $pq-focus-border-color !important;
-        outline: 0;
-        @if $enable-shadows {
-          @include box-shadow($input-box-shadow, $pq-focus-box-shadow);
-        } @else {
-          // Avoid using mixin so we can pass custom focus shadow properly
-          box-shadow: $pq-focus-box-shadow !important;
-        }
-      }
-}
+//     &:focus {
+//         color: $pq-focus-color !important;
+//         background-color: $input-focus-bg;
+//         border-color: $pq-focus-border-color !important;
+//         outline: 0;
+//         @if $enable-shadows {
+//           @include box-shadow($input-box-shadow, $pq-focus-box-shadow);
+//         } @else {
+//           // Avoid using mixin so we can pass custom focus shadow properly
+//           box-shadow: $pq-focus-box-shadow !important;
+//         }
+//       }
+// }

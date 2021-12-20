@@ -4,13 +4,16 @@
   "description": "testing NPM out",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "compile:sass": "sass --watch scss:dist/css"
+    "compile:compressed": "gulp compressed",
+    "compile:expanded": "gulp expanded",
+    "compile": "gulp compile"
   },
   "author": "Jack Pakela <jack.pakela@proquest.com",
   "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.0.1"
+  },
   "devDependencies": {
-    "bootstrap": "^5.0.1",
     "gulp": "^4.0.2",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^5.0.0",

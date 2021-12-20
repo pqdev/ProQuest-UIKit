@@ -4,33 +4,84 @@
 //     background-color: $nav-link-background-color;
 //   }
 
-  //
-  // Pills
-  //
+
+// $nav-pills-hover-color:             #dadadade;
+// $nav-pills-border-radius:           0;
+// $nav-pills-link-active-color:       #555;
   
-  .nav-gray-pq {
+// Navbar Nav
+.nav-gray-pq { 
+  //border-bottom: 3px solid transparent;
+  background-color: $nav-link-background-color-pq;
+  
+  .nav-link {
+    //
+    background: none;
+    border: 0;
+    @include border-radius($nav-pills-border-radius-pq);
+    border-bottom: 3px solid transparent;
+    color: $nav-pills-link-active-color-pq;
+  }
+
+  .nav-link.active,
+  .show > .nav-link {
+    color: $nav-pills-link-active-color-pq;
+    @include gradient-bg($nav-pills-link-active-bg-pq);
+    border-bottom: 3px solid $proquest-brand;
+  }
+}
+
+  .hide-bar { 
     //border-bottom: 3px solid transparent;
-    background-color: $nav-link-background-color;
     
     .nav-link {
       //
       background: none;
       border: 0;
-      @include border-radius($nav-pills-border-radius);
-      border-bottom: 3px solid transparent;
+      @include border-radius($nav-pills-border-radius-pq);
+      border-bottom: 4px solid transparent;
+      color: $nav-pills-link-active-color-pq;
     }
   
     .nav-link.active,
     .show > .nav-link {
-      color: $nav-pills-link-active-color;
-      @include gradient-bg($nav-pills-link-active-bg);
-      border-bottom: 3px solid $proquest-brand;
+      color: $nav-pills-link-active-color-pq;
+      // @include gradient-bg(#626262de);
+      border-bottom: 4px solid rgb(197, 195, 195);
     }
   }
 
   .hover-light {
       &:hover {
-        background-color: $nav-pills-hover-color;
+        background-color: $nav-pills-hover-color-pq;
         
       }
   }
+
+  //
+  // Pills
+  //
+
+  .nav-pills-pq {
+    .nav-link {
+      border: 0;
+      @include border-radius($nav-pills-border-radius);
+      // color: #555;
+
+      &:hover {
+        color: $ui-primary;
+        background-color: #eee;
+      }
+
+    }
+  
+    .nav-link.active,
+    .show > .nav-link {
+      color: white;
+      @include gradient-bg($proquest-brand);
+    }
+  }
+
+
+
+

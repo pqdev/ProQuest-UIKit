@@ -1,0 +1,22 @@
+// Four types of cards
+// 1. Image cap / Vertical / Button
+// 2. Titles / Text / Links
+// 3. Horizontal
+// 4. Grid Cards
+
+.card-text {
+    font-family: $font-family-sans-serif !important;
+    color: #555 !important;
+    margin: 0px !important;
+    font-size: 18px;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+
+.image-fit {
+    height: 100% !important;
+}

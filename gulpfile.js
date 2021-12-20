@@ -12,7 +12,8 @@ gulp.task('expanded', async function(cb){
     gulp.src(styleSRC)
         .pipe(sass({
             errorLogToConsole: true,
-            outputStyle: 'expanded'
+            outputStyle: 'expanded',
+            includePaths: ['./node_modules/']
         }))
         .on('error', console.error.bind(console))
         .pipe(gulp.dest(styleDIST))
@@ -25,7 +26,8 @@ gulp.task('compressed', function(cb){
         .pipe(sourcemaps.init())
         .pipe(sass({
             errorLogToConsole: true,
-            outputStyle: 'compressed'
+            outputStyle: 'compressed',
+            includePaths: ['./node_modules/']
         }))
         .on( 'error', console.error.bind(console) )
         // .pipe(autoprefixer({                            -- ONLY USE IF NECESSARY
@@ -39,7 +41,8 @@ gulp.task('compressed', function(cb){
 
 });
 
-gulp.task('default', function(){
-    gulp.watch(styleSRC).on('change', gulp.series('compressed', 'expanded'));
+gulp.task('compile', gulp.series('expanded', 'compressed'));
 
+gulp.task('default', function(){
+    gulp.watch(styleSRC).on('change', gulp.series('expanded', 'compressed'));
 });
