@@ -5,10 +5,14 @@
 // 4. Grid Cards
 
 .card-text {
-    font-family: $font-family-sans-serif !important;
-    color: #555 !important;
-    margin: 0px !important;
+    font-family: $font-family-sans-serif;
+    color: #555;
+    margin: 0px;
     font-size: 18px;
+}
+
+h2.card-title {
+    font-size: 30px;
 }
 
 .card-img-top {
@@ -17,6 +21,7 @@
     object-fit: cover;
 }
 
+// If attaching an image to a card that doesn't fit, add this as a class attribute
 .image-fit {
     height: 100% !important;
 }

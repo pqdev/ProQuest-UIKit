@@ -10946,7 +10946,7 @@ textarea.form-control-lg {
 }
 
 .diagonal-thin {
-  width: 5px;
+  width: 8px;
   height: 60px;
   padding: 0;
   background: #3d3e73;
@@ -11480,10 +11480,14 @@ a {
 }
 
 .card-text {
-  font-family: "Roboto", Helvetica, Arial, sans-serif !important;
-  color: #555 !important;
-  margin: 0px !important;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  color: #555;
+  margin: 0px;
   font-size: 18px;
+}
+
+h2.card-title, .card-title.h2 {
+  font-size: 30px;
 }
 
 .card-img-top {
