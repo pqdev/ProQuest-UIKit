@@ -102,6 +102,8 @@ Include a theme of your choice for your project:
         - sample-icon.png
         - start-icon.png
 
+// WIP
+
 #### js/
 - bootstrap.bundle.min.js
 
