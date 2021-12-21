@@ -11,7 +11,9 @@
   "author": "Jack Pakela <jack.pakela@proquest.com",
   "license": "ISC",
   "dependencies": {
-    "bootstrap": "^5.0.1"
+    "bootstrap": "^5.0.1",
+    "gulp-clean": "^0.4.0",
+    "gulp-wait": "^0.0.2"
   },
   "devDependencies": {
     "gulp": "^4.0.2",

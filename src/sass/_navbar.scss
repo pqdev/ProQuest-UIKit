@@ -64,7 +64,7 @@
     box-shadow: 0 5px 5px rgba(182, 182, 182, 0.25);
   }
   .pq-logo {
-    background-image: url('../../dist/images/pq-logo-light.svg'), none;
+    background-image: url('../images/pq-logo-light.svg'), none;
     background-size: 53px 11px;
     height: 11px;
     width: 53px;
@@ -107,7 +107,7 @@
 
 //corner-icon
 .corner-icon {
-  background-image: url('../../dist/images/start-icon.png');
+  background-image: url('../images/start-icon.png');
   background-repeat: no-repeat;
   background-size: contain;
   width: 25px;
@@ -154,7 +154,7 @@
 }
 
 .pq-logo {
-  background-image: url('../../dist/images/pq-logo-header.svg'), none;
+  background-image: url('../images/pq-logo-header.svg'), none;
   background-size: 53px 11px;
   height: 11px;
   width: 53px;

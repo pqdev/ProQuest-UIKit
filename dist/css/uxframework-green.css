@@ -1,44 +1,44 @@
 @charset "UTF-8";
 @font-face {
   font-family: "Roboto";
-  src: url("../../dist/fonts/Roboto/Roboto-Regular.woff2") format("woff2"), url("../../dist/fonts/Roboto/Roboto-Regular.woff") format("woff");
+  src: url("../fonts/Roboto/Roboto-Regular.woff2") format("woff2"), url("../fonts/Roboto/Roboto-Regular.woff") format("woff");
 }
 @font-face {
   font-family: "Roboto Light";
-  src: url("../../dist/fonts/Roboto/Roboto-Light.woff2") format("woff2"), url("../../dist/fonts/Roboto/Roboto-Light.woff") format("woff");
+  src: url("../fonts/Roboto/Roboto-Light.woff2") format("woff2"), url("../fonts/Roboto/Roboto-Light.woff") format("woff");
 }
 @font-face {
   font-family: "Roboto Condensed";
-  src: url("../../dist/fonts/Roboto/RobotoCondensed-Regular.woff2") format("woff2"), url("../../dist/fonts/Roboto/RobotoCondensed-Regular.woff") format("woff");
+  src: url("../fonts/Roboto/RobotoCondensed-Regular.woff2") format("woff2"), url("../fonts/Roboto/RobotoCondensed-Regular.woff") format("woff");
 }
 @font-face {
   font-family: "Roboto-Bold";
-  src: url("../../dist/fonts/Roboto/Roboto-Bold.woff2") format("woff2"), url("../../dist/fonts/Roboto/Roboto-Bold.woff") format("woff");
+  src: url("../fonts/Roboto/Roboto-Bold.woff2") format("woff2"), url("../fonts/Roboto/Roboto-Bold.woff") format("woff");
 }
 @font-face {
   font-family: "aleobold";
-  src: url("../../dist/fonts/Aleo/Aleo-Bold.woff2") format("woff2"), url("../../dist/fonts/Aleo/Aleo-Bold.woff") format("woff");
+  src: url("../fonts/Aleo/Aleo-Bold.woff2") format("woff2"), url("../fonts/Aleo/Aleo-Bold.woff") format("woff");
   font-style: normal;
 }
 @font-face {
   font-family: "aleobolditalic";
-  src: url("../../dist/fonts/Aleo/Aleo-BoldItalic.woff2") format("woff2"), url("../../dist/fonts/Aleo/Aleo-BoldItalic.woff") format("woff");
+  src: url("../fonts/Aleo/Aleo-BoldItalic.woff2") format("woff2"), url("../fonts/Aleo/Aleo-BoldItalic.woff") format("woff");
 }
 @font-face {
   font-family: "aleoitalic";
-  src: url("../../dist/fonts/Aleo/Aleo-Italic.woff2") format("woff2"), url("../../dist/fonts/Aleo/Aleo-Italic.woff") format("woff");
+  src: url("../fonts/Aleo/Aleo-Italic.woff2") format("woff2"), url("../fonts/Aleo/Aleo-Italic.woff") format("woff");
 }
 @font-face {
   font-family: "aleolight";
-  src: url("../../dist/fonts/Aleo/Aleo-Light.woff2") format("woff2"), url("../../dist/fonts/Aleo/Aleo-Light.woff") format("woff");
+  src: url("../fonts/Aleo/Aleo-Light.woff2") format("woff2"), url("../fonts/Aleo/Aleo-Light.woff") format("woff");
 }
 @font-face {
   font-family: "aleolightitalic";
-  src: url("../../dist/fonts/Aleo/Aleo-LightItalic.woff2") format("woff2"), url("../../dist/fonts/Aleo/Aleo-LightItalic.woff") format("woff");
+  src: url("../fonts/Aleo/Aleo-LightItalic.woff2") format("woff2"), url("../fonts/Aleo/Aleo-LightItalic.woff") format("woff");
 }
 @font-face {
   font-family: "aleoregular";
-  src: url("../../dist/fonts/Aleo/Aleo-Regular.woff2") format("woff2"), url("../../dist/fonts/Aleo/Aleo-Regular.woff") format("woff");
+  src: url("../fonts/Aleo/Aleo-Regular.woff2") format("woff2"), url("../fonts/Aleo/Aleo-Regular.woff") format("woff");
 }
 :root {
   --bs-blue: #0d6efd;
@@ -10994,7 +10994,7 @@ textarea.form-control-lg {
   box-shadow: 0 5px 5px rgba(182, 182, 182, 0.25);
 }
 .navbar-light-pq .pq-logo {
-  background-image: url("../../dist/images/pq-logo-light.svg"), none;
+  background-image: url("../images/pq-logo-light.svg"), none;
   background-size: 53px 11px;
   height: 11px;
   width: 53px;
@@ -11013,7 +11013,7 @@ textarea.form-control-lg {
   padding-left: 12px;
 }
 .navbar-light-pq .corner-icon {
-  background-image: url("../../dist/images/navIconGreen.svg");
+  background-image: url("../images/navIconGreen.svg");
   background-repeat: no-repeat;
   background-size: contain;
   width: 50px;
@@ -11028,7 +11028,7 @@ textarea.form-control-lg {
 }
 
 .corner-icon {
-  background-image: url("../../dist/images/start-icon.png");
+  background-image: url("../images/start-icon.png");
   background-repeat: no-repeat;
   background-size: contain;
   width: 25px;
@@ -11074,7 +11074,7 @@ textarea.form-control-lg {
 }
 
 .pq-logo {
-  background-image: url("../../dist/images/pq-logo-header.svg"), none;
+  background-image: url("../images/pq-logo-header.svg"), none;
   background-size: 53px 11px;
   height: 11px;
   width: 53px;

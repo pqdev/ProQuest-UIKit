@@ -14,7 +14,7 @@ $proquest-brand: $proquest-blue;
 $proquest-diagonal: $proquest-blue-diagonal;
 
 // Define your application icon here.
-$proquest-corner: '../../dist/images/navIconBlue.svg';
+$proquest-corner: '../images/navIconBlue.svg';
 
 // Layout & components
 @import "bootstrap/scss/root";

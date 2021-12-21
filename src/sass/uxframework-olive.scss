@@ -14,7 +14,7 @@ $proquest-brand: $proquest-olive;
 $proquest-diagonal: $proquest-olive-diagonal;
 
 // Define your application icon here.
-$proquest-corner: '../../dist/images/navIconOlive.svg';
+$proquest-corner: '../images/navIconOlive.svg';
 
 // Layout & components
 @import "bootstrap/scss/root";
