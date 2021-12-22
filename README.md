@@ -1,11 +1,18 @@
 # ProQuest UI Kit v5
 
-UIKit contains the code used for styling sites for ProQuest. Please see [UX-Framework site](https://ux.proquest.com/) for implementation details.
+ProQuest-UIKit contains the code used for styling sites for ProQuest. Please see [UX-Framework site](https://ux.proquest.com/) for implementation details.
 
-* If you don't have a modern commandline-based local build environment, you can simply download UIKit:
+> If you don't have a modern commandline-based local build environment, you can simply download UIKit:
 https://github.com/pqdev/ProQuest-UIKit/tree/master/download
 
-## Include ProQuest-UIKit into your project via NPM:
+## Version 5
+
+ProQuest-UIKit v5 is built ontop of [Bootstrap](https://getbootstrap.com) v5 using [SASS](https://sass-lang.com/) and then compiled to CSS. Previous versions required your project to have Bootstrap installed as a dependency and to have the `bootstrap.css` styles imported into your stylesheet or your `angular.json file`, but v5 will install Bootstrap as a dependency of itself and each UIKit them has bootstrap's style already integrated. This means a little less imports for your project.
+
+## Getting Started
+
+
+### Include ProQuest-UIKit into your project via NPM:
 
 ```bash
 $ npm install proquest-uikit --save
@@ -13,12 +20,23 @@ $ npm install proquest-uikit --save
 For Angular Projects, include `bootstrap.bundle.min.js` in your `angular.json` file:
 
 ```JSON
-"scripts": [
-    "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
-]
+{
+    "arthitech": {
+        "build": {
+            "options": {
+                "scripts": [
+                    "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+                ]
+            }
+        }
+    }
+}
 ```
 
-Include a theme of your choice for your project:
+Include a theme of your choice for your project into your project:
+
+### Method 1 (For Angular and Non-Angular Projects)
+###### Import into style sheet
 ```css
 // Blue Theme
 @import '~proquest-uikit/dist/css/uxframework-blue.min.css';
@@ -36,89 +54,84 @@ Include a theme of your choice for your project:
 @import '~proquest-uikit/dist/css/uxframework-teal.min.css';
 ```
 
-
-## Package Structure
-- dist/
-    - css/
-        - uxframework-blue.css
-        - uxframework-blue.min.css
-        - uxframework-green.css
-        - uxframework-green.min.css
-        - uxframework-olive.css
-        - uxframework-olive.min.css
-        - uxframework-purple.css
-        - uxframework-purple.min.css
-        - uxframework-teal.css
-        - uxframework-teal.min.css
-    - fonts/
-        - Aleo/
-            - Aleo-Bold.ttf
-            - Aleo-Bold.woff
-            - Aleo-Bold.woff2
-            - Aleo-BoldItalic.ttf
-            - Aleo-BoldItalic.woff
-            - Aleo-BoldItalic.woff2
-            - Aleo-Italic.ttf
-            - Aleo-Italic.woff
-            - Aleo-Italic.woff2
-            - Aleo-Light.ttf
-            - Aleo-Light.woff
-            - Aleo-Light.woff2
-            - Aleo-LightItalic.ttf
-            - Aleo-LightItalic.woff
-            - Aleo-LightItalic.woff2
-            - Aleo-Regular.ttf
-            - Aleo-Regular.woff
-            - Aleo-Regular.woff2
-        - Roboto/
-            - Roboto-Black.ttf
-            - Roboto-BlackItalic.ttf
-            - Roboto-Bold.ttf
-            - Roboto-BoldItalic.ttf
-            - Roboto-Italic.ttf
-            - Roboto-Light.ttf
-            - Roboto-Light.woff
-            - Roboto-Light.woff2
-            - Roboto-LightItalic.ttf
-            - Roboto-Medium.ttf
-            - Roboto-MediumItalic.ttf
-            - Roboto-Regular.ttf
-            - Roboto-Regular.woff
-            - Roboto-Regular.woff2
-            - Roboto-Thin.ttf
-            - Roboto-ThinItalic.ttf
-            - RobotoCondensed-Regular.ttf
-            - RobotoCondensed-Regular.woff
-            - RobotoCondensed-Regular.woff2
-    - images/
-        - navIconBlue.svg
-        - navIconGreen.svg
-        - navIconOlive.svg
-        - navIconPurple.svg
-        - navIconTeal.svg
-        - pq-logo-header.svg
-        - pq-logo-light.svg
-        - pq-logo.svg
-        - sample-icon.png
-        - start-icon.png
-
-// WIP
-
-#### js/
-- bootstrap.bundle.min.js
-
-## Include UIKit into your project by using NPM:
-`npm i proquest-uikit
-
-## If you use LESS, then you may import a theme:
-```less
-@import '../../node_modules/proquest-uikit/src/less/brand-colors';
-@images: '/assets/img/';
-@icons: '/assets/img/icons/';
-
-/* file paths */
-@image-path: @images;
-
-// Theme color
-@proquest-brand: @proquest-blue;
+### Method 2 (Only for Angular Projects)
+###### Inject into angular.json
+```json
+{
+    "architech": {
+        "build": {
+            "options": {
+                "styles": ["./node_modules/dist/css/uxframework-blue.min.css"]
+            }
+        }
+    }
+}
 ```
+
+## File Structure
+```
+dist/
+├── css/
+│   ├── uxframework-blue.css
+│   ├── uxframework-blue.min.css
+│   ├── uxframework-green.css
+│   ├── uxframework-green.min.css
+│   ├── uxframework-olive.css
+│   ├── uxframework-olive.min.css
+│   ├── uxframework-purple.css
+│   ├── uxframework-purple.min.css
+│   ├── uxframework-teal.css
+│   └── uxframework-teal.min.css
+├── fonts/
+│   ├── Aleo/
+│   │   ├── Aleo-Bold.ttf
+│   │   ├── Aleo-Bold.woff
+│   │   ├── Aleo-Bold.woff2
+│   │   ├── Aleo-BoldItalic.ttf
+│   │   ├── Aleo-BoldItalic.woff
+│   │   ├── Aleo-BoldItalic.woff2
+│   │   ├── Aleo-Italic.ttf
+│   │   ├── Aleo-Italic.woff
+│   │   ├── Aleo-Italic.woff2
+│   │   ├── Aleo-Light.ttf
+│   │   ├── Aleo-Light.woff
+│   │   ├── Aleo-Light.woff2
+│   │   ├── Aleo-LightItalic.ttf
+│   │   ├── Aleo-LightItalic.woff
+│   │   ├── Aleo-LightItalic.woff2
+│   │   ├── Aleo-Regular.ttf
+│   │   ├── Aleo-Regular.woff
+│   │   └── Aleo-Regular.woff2
+│   └── Roboto/
+│       ├── Roboto-Black.ttf
+│       ├── Roboto-BlackItalic.ttf
+│       ├── Roboto-Bold.ttf
+│       ├── Roboto-BoldItalic.ttf
+│       ├── Roboto-Italic.ttf
+│       ├── Roboto-Light.ttf
+│       ├── Roboto-Light.woff
+│       ├── Roboto-Light.woff2
+│       ├── Roboto-LightItalic.ttf
+│       ├── Roboto-Medium.ttf
+│       ├── Roboto-MediumItalic.ttf
+│       ├── Roboto-Regular.ttf
+│       ├── Roboto-Regular.woff
+│       ├── Roboto-Regular.woff2
+│       ├── Roboto-Thin.ttf
+│       ├── Roboto-ThinItalic.ttf
+│       ├── RobotoCondensed-Regular.ttf
+│       ├── RobotoCondensed-Regular.woff
+│       └── RobotoCondensed-Regular.woff2
+└── images/
+    ├── navIconBlue.svg
+    ├── navIconGreen.svg
+    ├── navIconOlive.svg
+    ├── navIconPurple.svg
+    ├── navIconTeal.svg
+    ├── pq-logo-header.svg
+    ├── pq-logo-light.svg
+    ├── pq-logo.svg
+    ├── sample-icon.png
+    └── start-icon.png
+```
+
