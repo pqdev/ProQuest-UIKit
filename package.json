@@ -1,25 +1,25 @@
 {
-  "name": "git",
-  "version": "1.0.0",
-  "description": "testing NPM out",
-  "main": "index.js",
+  "name": "proquest-uikit",
+  "version": "5.0.0",
+  "description": "ProQuest-UIKit contains the code used for styling sites for ProQuest. Please see UX-Framework (http://ux.proquest.com) site for implementation details. This project is intended for ProQuest properties, but we won't stop you from using it. Really though, just use Bootstrap.",
+  "main": ".",
   "scripts": {
     "compile:compressed": "gulp compressed",
     "compile:expanded": "gulp expanded",
     "compile": "gulp compile"
   },
-  "author": "Jack Pakela <jack.pakela@proquest.com",
+  "author": "UX Framework <uxframework@proquest.com>",
   "license": "ISC",
   "dependencies": {
-    "bootstrap": "^5.0.1",
-    "gulp-clean": "^0.4.0",
-    "gulp-wait": "^0.0.2"
+    "bootstrap": "^5.0.1"
   },
   "devDependencies": {
     "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^5.0.0",
     "gulp-sourcemaps": "^3.0.0",
+    "gulp-wait": "^0.0.2",
     "sass": "1.32"
   }
 }
