@@ -7,7 +7,7 @@ https://github.com/pqdev/ProQuest-UIKit/tree/master/download
 
 ## Version 5
 
-ProQuest-UIKit v5 is built ontop of [Bootstrap](https://getbootstrap.com) v5 using [SASS](https://sass-lang.com/) and then compiled to CSS. Previous versions required your project to have Bootstrap installed as a dependency and to have the `bootstrap.css` styles imported into your stylesheet or your `angular.json file`, but v5 will install Bootstrap as a dependency of itself and each UIKit them has bootstrap's style already integrated. This means a little less imports for your project.
+ProQuest-UIKit v5 is built ontop of [Bootstrap](https://getbootstrap.com) v5 using [SASS](https://sass-lang.com/) and then compiled to CSS. Previous versions required your project to have Bootstrap installed as a dependency and to have the `bootstrap.css` styles imported into your stylesheet or your `angular.json` file, but v5 will install Bootstrap as a dependency of itself and each UIKit them has bootstrap's style already integrated. This means a little less imports for your project.
 
 ## Getting Started
 
