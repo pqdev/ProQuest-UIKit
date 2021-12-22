@@ -12,31 +12,13 @@ ProQuest-UIKit v5 is built ontop of [Bootstrap](https://getbootstrap.com) v5 usi
 ## Getting Started
 
 
-### Include ProQuest-UIKit into your project via NPM:
-
+###### Include ProQuest-UIKit into your project via NPM:
 ```bash
 $ npm install proquest-uikit --save
 ```
-For Angular Projects, include `bootstrap.bundle.min.js` in your `angular.json` file:
 
-```JSON
-{
-    "arthitech": {
-        "build": {
-            "options": {
-                "scripts": [
-                    "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
-                ]
-            }
-        }
-    }
-}
-```
-
-Include a theme of your choice for your project into your project:
-
-### Method 1 (For Angular and Non-Angular Projects)
-###### Import into style sheet
+#### Method 1 (For Angular and Non-Angular Projects)
+###### Import Theme into style sheet
 ```css
 // Blue Theme
 @import '~proquest-uikit/dist/css/uxframework-blue.min.css';
@@ -54,14 +36,25 @@ Include a theme of your choice for your project into your project:
 @import '~proquest-uikit/dist/css/uxframework-teal.min.css';
 ```
 
+###### Import Bootstrap.js into your JavaScript files
+```JavaScript
+import '~bootstrap/dist/js/bootstrap.bundle.min.js';
+```
+
+
 ### Method 2 (Only for Angular Projects)
-###### Inject into angular.json
+###### Inject Bootstrap.js and Theme style into angular.json
 ```json
 {
     "architech": {
         "build": {
             "options": {
-                "styles": ["./node_modules/dist/css/uxframework-blue.min.css"]
+                "scripts": [
+                    "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+                ],
+                "styles": [
+                    "./node_modules/dist/css/uxframework-blue.min.css"
+                ]
             }
         }
     }
