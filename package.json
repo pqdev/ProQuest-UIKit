@@ -2,14 +2,26 @@
   "name": "proquest-uikit",
   "version": "5.0.0",
   "description": "ProQuest-UIKit contains the code used for styling sites for ProQuest. Please see UX-Framework (http://ux.proquest.com) site for implementation details. This project is intended for ProQuest properties, but we won't stop you from using it. Really though, just use Bootstrap.",
-  "main": ".",
-  "scripts": {
-    "compile:compressed": "gulp compressed",
-    "compile:expanded": "gulp expanded",
-    "compile": "gulp compile"
+  
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pqdev/ProQuest-UIKit.git"
   },
-  "author": "UX Framework <uxframework@proquest.com>",
-  "license": "ISC",
+  "engines": {
+    "node": ">=0.12"
+  },
+  "files": [
+    "src",
+    "dist",
+    "!node_modules",
+    "!download",
+    "!.git"
+  ],
+  "bugs": {
+    "url": "https://github.com/pqdev/ProQuest-UIKit/issues"
+  },
+  "homepage": "https://github.com/pqdev/ProQuest-UIKit#readme",
+  "main": ".",
   "dependencies": {
     "bootstrap": "^5.0.1"
   },
@@ -21,5 +33,15 @@
     "gulp-sourcemaps": "^3.0.0",
     "gulp-wait": "^0.0.2",
     "sass": "1.32"
-  }
+  },
+  "scripts": {
+    "compile:compressed": "gulp compressed",
+    "compile:expanded": "gulp expanded",
+    "compile": "gulp compile"
+  },
+  "keywords": [
+    "proquest"
+  ],
+  "author": "UX Framework <uxframework@proquest.com>",
+  "license": "ISC"
 }
