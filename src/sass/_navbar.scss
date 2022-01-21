@@ -1,0 +1,255 @@
+
+// Custom Code Below:
+.navbar {
+  padding-bottom: 0px;
+  padding-top: 0px;
+}
+
+.diagonal-thin {
+  width: 8px;
+  height: 60px;
+  padding: 0;
+  background: darken($proquest-brand, 15%);
+  transition: 140ms;
+  &:hover {
+    background: $proquest-brand;
+    transition: 140ms;
+  }
+}
+
+// LIGHT NAV 
+.navbar-light-pq {
+  
+  .navbar-pq a {
+    color: #555;
+    &:hover, &:focus {
+      color: #555;
+    }
+  }
+
+  .nav-link-pq {
+    color: #555;
+  }
+
+  .navbar-nav .nav-link {
+    color: #555;
+    &:hover, &:focus {
+      color: #555;
+      background: #555;
+    }
+  }
+
+  .dropdown-right {
+    background: #777;
+    &:hover {
+      background: #555;
+    }
+  }
+
+  .navbar-toggler {
+    color: rgb(100 100 100 / 55%);
+  }
+
+  .dropdown-padding-flex {
+    background: white;
+  }
+
+  .dropdown-item:active {
+    background-color: #626262de;
+    color: white;
+  }
+
+  .bg-brand {
+    background-color: white;
+    box-shadow: 0 5px 5px rgba(182, 182, 182, 0.25);
+  }
+  .pq-logo {
+    background-image: url('../images/pq-logo-light.svg'), none;
+    background-size: 53px 11px;
+    height: 11px;
+    width: 53px;
+    position: absolute;
+    top: 15px;
+    left: 11px;
+    display: inline-block;
+
+  }
+
+  .diagonal {
+    background: transparent;
+    width: 50px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 12px;
+  }
+
+  .corner-icon {
+    background-image: url($proquest-corner);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+
+  }
+
+  .light-theme-container {  
+    background-color: transparent;
+  }
+
+  .navbar-dark .navbar-nav .show > .nav-link, .navbar-dark .navbar-nav .nav-link.active {
+    color: #555;
+    background: #d7d7d7;
+  }
+}
+// --------------------------Navbar Light End------------------------------
+
+//corner-icon
+.corner-icon {
+  background-image: url('../images/start-icon.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 25px;
+  height: 25px;
+}
+
+//Diagonal
+.diagonal {
+  background: $proquest-diagonal;
+  width: 50px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.diagonal-light {
+  background: transparent;
+  width: 50px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spacing-left {
+  margin-left: 12px;
+}
+
+.dropdown-right {
+  margin-right: 12px;
+  background-color: darken($proquest-brand, 5%);
+  &:hover {
+    background-color: darken($proquest-brand, 10%);
+  }
+}
+
+.dropdown-right-light {
+  margin-right: 12px;
+  background-color: #b6b6b6;
+  &:hover {
+    background-color: darken(#b6b6b6, 10%);
+  }
+}
+
+.pq-logo {
+  background-image: url('../images/pq-logo-header.svg'), none;
+  background-size: 53px 11px;
+  height: 11px;
+  width: 53px;
+  position: absolute;
+  top: 15px;
+  left: 12px;
+  display: inline-block;
+}
+
+.container-fluid {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.navbar-toggler {
+  margin-left: auto;
+}
+
+.resize-icon {
+  width: 24px;
+  height: 24px;
+
+}
+
+.resize-icon-light {
+  height: 50px;
+  padding-left: 10px;
+}
+
+.navbar-pq {
+  font-family: $font-family-serif;
+  font-weight: 300;
+  font-size: 22px;
+  padding-top: 20px;
+  height: 60px;
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  margin-right: auto;
+}
+
+@media (max-width: 286px) {
+  .diagonal {
+    display: none;
+  }
+}
+
+// -- New Solution --
+@media (max-width: 991.9px) {
+  .navbar-dark #smallScreen .dropdown-padding-flex{
+    padding-left: 0.5rem;
+    padding-right: 1rem; //changed to margin
+    background-color: darken($proquest-brand, 10%);
+    transition: none;
+
+    &:hover, &:focus{
+      color: #555;
+      background: #d7d7d7;
+    }
+  }
+
+  .navbar-light-pq #smallScreen .dropdown-padding-flex{
+    padding-left: 0.5rem;
+    padding-right: 1rem; //changed to margin
+    background-color: white;
+    transition: none;
+
+    &:hover, &:focus{
+      color: #555;
+      background: #d7d7d7;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  #dropdownMenu .dropdown-padding-flex{
+    padding-right: 0.7rem;
+    margin-right: 0.3rem;
+    line-height: 44px;
+    transition: none;
+    background-color: transparent;
+  }
+
+  .navbar-nav .nav-item .nav-link {
+    &:hover, &:focus{
+      color: #ffffff;
+      background: #555;
+    }
+  }
+
+  .nav-item .big-screen-dropdown {
+    padding-right: 0.7rem;
+    margin-right: 0.3rem;
+    line-height: 44px;
+    color: white;
+  }
+
+}

@@ -1,54 +1,47 @@
 {
-  "name": "@pqdev/proquest-uikit",
-  "version": "1.5.4",
+  "name": "proquest-uikit",
+  "version": "5.0.0",
+  "description": "ProQuest-UIKit contains the code used for styling sites for ProQuest. Please see UX-Framework (http://ux.proquest.com) site for implementation details. This project is intended for ProQuest properties, but we won't stop you from using it. Really though, just use Bootstrap.",
+  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pqdev/ProQuest-UIKit.git"
   },
-  "dependencies": {
-    "bootstrap": "~3.4.1",
-    "node-less": "^1.0.0"
-  },
   "engines": {
     "node": ">=0.12"
   },
-  "description": "UIKit contains the code used for styling sites for ProQuest. Please see UX-Framework (http://ux.proquest.com) site for implementation details. This project is intended for ProQuest properties, but we won't stop you from using it. Really though, just use Bootstrap.",
+  "files": [
+    "src",
+    "dist",
+    "!node_modules",
+    "!download",
+    "!.git"
+  ],
   "bugs": {
     "url": "https://github.com/pqdev/ProQuest-UIKit/issues"
   },
   "homepage": "https://github.com/pqdev/ProQuest-UIKit#readme",
   "main": ".",
-  "files": [
-    "src",
-    "dist",
-    "!node_components",
-    "!download",
-    "!.git"
-  ],
+  "dependencies": {
+    "bootstrap": "^5.0.1"
+  },
   "devDependencies": {
-    "grunt": "0.4.5",
-    "grunt-autoprefixer": "0.7.6",
-    "grunt-concurrent": "0.5.0",
-    "grunt-contrib-clean": "0.5.0",
-    "grunt-contrib-compress": "0.13.0",
-    "grunt-contrib-concat": "0.4.0",
-    "grunt-contrib-copy": "0.5.0",
-    "grunt-contrib-cssmin": "0.12.3",
-    "grunt-contrib-less": "1.4.1",
-    "grunt-newer": "0.7.0",
-    "less": "2.7.3",
-    "load-grunt-tasks": "0.4.0",
-    "time-grunt": "0.3.2"
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-wait": "^0.0.2",
+    "sass": "1.32"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile:compressed": "gulp compressed",
+    "compile:expanded": "gulp expanded",
+    "compile": "gulp compile"
   },
   "keywords": [
-    "css",
-    "less",
-    "bootstrap3",
     "proquest"
   ],
-  "author": "uxframework@proquest.com",
-  "license": "GNU-2.0"
+  "author": "UX Framework <uxframework@proquest.com>",
+  "license": "ISC"
 }

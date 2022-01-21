@@ -1,0 +1,158 @@
+h1, .h1,
+h2, .h2 {
+    font-family: $font-family-serif;
+    color: $medium-gray;
+    &.light {
+        font-family: $font-family-serif-light;
+        
+    }
+}
+
+h3, .h3 {
+    font-family: $font-family-sans-serif;
+    font-weight: normal;
+    color: $gray-600;
+    font-size: 23px;
+    &.light {
+        font-family: $font-family-sans-serif-light;
+    }
+}
+
+h4, .h4 {
+    font-family: $font-family-sans-serif;
+    font-weight: 700;
+    color: $proquest-brand;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    &.light {
+        font-weight: 400;
+    }
+    &.condensed {
+        font-size: 20px;
+        font-weight: normal;
+    }
+}
+
+h5, .h5 {
+    font-family: $font-family-sans-serif;
+    font-weight: 500;
+    color: $gray-700;
+    &.light {
+        font-weight: 400;
+    }
+    &.condensed {
+        font-size: 14px;
+        font-weight: bold;
+    }
+}
+
+h6, .h6 {
+    font-family: $font-family-sans-serif;
+    font-weight: 700;
+    color: $proquest-brand;
+    &.light {
+        font-weight: 500;
+    }
+    &.condensed{
+        font-size: 14px;
+        font-weight: bold;
+    }
+}
+.lead {
+    font-size: 18px;
+    font-family: 'Roboto Light', Helvetica, Arial, sans-serif;
+}
+
+small, .small {
+    font-size: 85%;
+}
+
+blockquote {
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    font-size: 17.5px;
+    border-left: 5px solid #eee;
+}
+
+blockquote .small, blockquote footer, blockquote small {
+    display: block;
+    font-size: 80%;
+    line-height: 1.42857143;
+    color: #777;
+}
+
+.blockquote-reverse, blockquote.pull-right {
+    padding-right: 15px;
+    padding-left: 0;
+    border-right: 5px solid #eee;
+    border-left: 0;
+    text-align: right;
+}
+
+p {
+    font-family: $font-family-sans-serif;
+}
+
+button {
+    font-family: $font-family-sans-serif;
+}
+
+a {
+    font-family: $font-family-sans-serif;
+}
+
+.navbar-pq a {
+    font-family: $font-family-serif;
+}
+
+table {
+    $font-family: $font-family-sans-serif;
+}
+
+
+// Custom Styles/Color changes if Needed
+.white{
+    color: #fff;
+    &:hover {
+        color: #fff;
+    }
+    &:focus {
+        color: #fff;
+    }
+}
+
+.sans-serif{
+    font-family: $font-family-sans-serif; 
+}
+
+.serif {
+    font-family: $font-family-serif;
+    color: #fff
+}
+
+.serif-italic {
+    font-family: $font-family-serif-italic;
+}
+.serif-bold {
+    font-family: $font-family-serif-bold;
+}
+
+.serif-light {
+    font-family: $font-family-sans-serif-light;
+}
+
+.sans-serif-light {
+    font-family: $font-family-sans-serif-light;
+}
+
+.serif-italic-light {
+    font-family: $font-family-serif-italic-light;
+}
+
+.serif-bold-italic {
+    font-family: $font-family-serif-bold-italic;
+}
+
+.condensed {
+    font-family: $font-family-condensed;
+}

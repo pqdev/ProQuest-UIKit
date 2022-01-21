@@ -1,6 +1,18 @@
-.idea/
-*.iml
-.tmp/
-.project
+# General
 node_modules/
-package-lock.json
+.DS_Store
+.AppleDouble
+.LSOverride
+.idea
+.cloud
+.project
+tmp/
+typings/
+dist/testing/
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json

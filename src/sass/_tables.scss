@@ -1,0 +1,9 @@
+.table-pq-brand {
+    color: white; // Keeps top header color set to white
+}
+.pq-bottom {
+
+    > :not(:last-child) > :last-child > * {
+        border-bottom-color: black !important; // Sets bottom border to black
+    }
+}
