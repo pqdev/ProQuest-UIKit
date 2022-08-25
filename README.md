@@ -36,6 +36,11 @@ $ npm install proquest-uikit --save
 @import '~proquest-uikit/dist/css/uxframework-teal.min.css';
 ```
 
+###### Import Icons into your style sheet
+```css
+@import '~bootstrap-icons/font/bootstrap-icons.css';
+```
+
 ###### Import Bootstrap.js into your JavaScript files
 ```JavaScript
 import '~bootstrap/dist/js/bootstrap.bundle.min.js';
@@ -43,7 +48,7 @@ import '~bootstrap/dist/js/bootstrap.bundle.min.js';
 
 
 ### Method 2 (Only for Angular Projects)
-###### Inject Bootstrap.js and Theme style into angular.json
+###### Inject Bootstrap.js, Icons, and PQ Theme style into angular.json
 ```json
 {
     "architech": {
@@ -54,6 +59,7 @@ import '~bootstrap/dist/js/bootstrap.bundle.min.js';
                 ],
                 "styles": [
                     "./node_modules/dist/css/uxframework-blue.min.css"
+                    "./node_modules/booststrap-icons/font/bootstrap-icons.css"
                 ]
             }
         }
