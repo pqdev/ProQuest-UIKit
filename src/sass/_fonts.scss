@@ -1,8 +1,10 @@
 // Imported Fonts
 //----------------------
 
-// Note: EOT, SVG, TTF, and OTF file types are outdated when applying to websites.
-// Below, file formats WOFF and WOFF2 are used.
+// IMPORTANT (for Angular Projects ONLY) ~ If you're having trouble getting the fonts
+// to appear on localhost after running npm start, remove @import './fonts'; from 
+// your uxframework-(color).scss and add them to your styles.scss
+
 
 // ----------------------------------- Roboto -----------------------------------
 

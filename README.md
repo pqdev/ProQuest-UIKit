@@ -7,7 +7,7 @@ https://github.com/pqdev/ProQuest-UIKit/tree/master/download
 
 ## Version 5
 
-ProQuest-UIKit v5 is built ontop of [Bootstrap](https://getbootstrap.com) v5 using [SASS](https://sass-lang.com/) and then compiled to CSS. Previous versions required your project to have Bootstrap installed as a dependency and to have the `bootstrap.css` styles imported into your stylesheet or your `angular.json` file, but v5 will install Bootstrap as a dependency of itself and each UIKit them has bootstrap's style already integrated. This means a little less imports for your project.
+ProQuest-UIKit v5 is built ontop of [Bootstrap](https://getbootstrap.com) v5 using [SCSS](https://sass-lang.com/) and then compiled to CSS. Previous versions required your project to have Bootstrap installed as a dependency and to have the `bootstrap.css` styles imported into your stylesheet or your `angular.json` file, but v5 will install Bootstrap as a dependency of itself and each UIKit them has bootstrap's style already integrated. This means a little less imports for your project.
 
 ## Getting Started
 
@@ -36,6 +36,11 @@ $ npm install proquest-uikit --save
 @import '~proquest-uikit/dist/css/uxframework-teal.min.css';
 ```
 
+###### Import Icons into your style sheet
+```css
+@import '~bootstrap-icons/font/bootstrap-icons.css';
+```
+
 ###### Import Bootstrap.js into your JavaScript files
 ```JavaScript
 import '~bootstrap/dist/js/bootstrap.bundle.min.js';
@@ -43,7 +48,7 @@ import '~bootstrap/dist/js/bootstrap.bundle.min.js';
 
 
 ### Method 2 (Only for Angular Projects)
-###### Inject Bootstrap.js and Theme style into angular.json
+###### Inject Bootstrap.js, Icons, and PQ Theme style into angular.json
 ```json
 {
     "architech": {
@@ -54,6 +59,7 @@ import '~bootstrap/dist/js/bootstrap.bundle.min.js';
                 ],
                 "styles": [
                     "./node_modules/dist/css/uxframework-blue.min.css"
+                    "./node_modules/booststrap-icons/font/bootstrap-icons.css"
                 ]
             }
         }
