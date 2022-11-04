@@ -9,6 +9,7 @@ node_modules/
 tmp/
 typings/
 dist/testing/
+src/testing/
 
 # Visual Studio Code
 .vscode/*
