@@ -134,3 +134,16 @@ dist/
     └── start-icon.png
 ```
 
+
+=====================================================================
+
+This repository has been migrated to Clarivate BitBucket.
+
+If you're still using github, please switch to the BitBucket repo at:
+  https://git.clarivate.io/projects/PQIS-Apps/repos/ProQuest-UIKit/browse
+
+An archive of the github repo has also been created, and will be made
+available.
+
+For more information about switching, see
+https://wiki.proquest.com/pages/viewpage.action?pageId=334604081
